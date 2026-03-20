@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Liste des 17 ODD — ONG EDUCATION ODD</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS GLOBAL -->
+  <link rel="stylesheet" href="assets/css/00-variables.css">
+  <link rel="stylesheet" href="assets/css/01-base.css">
+  <link rel="stylesheet" href="assets/css/10-layout.css">
+  <link rel="stylesheet" href="assets/css/20-header.css">
+  <link rel="stylesheet" href="assets/css/21-nav.css">
+  <link rel="stylesheet" href="assets/css/90-responsive.css">
+
+  <!-- CSS PAGE -->
+  <link rel="stylesheet" href="assets/css/pages/la-liste-des-17-odd.css">
+
+  <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script>
+
+  <script src="assets/js/header.js" defer></script>
+  <script src="assets/js/includes.js" defer></script>
+
+  <!-- JS PAGE -->
+  <script src="assets/js/pages/odd-list.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- Header injecté -->
+  <div id="site-header"></div>
+
+  <main class="page-odd-list">
+
+    <!-- EN-TÊTE ET STATISTIQUES -->
+    <section class="oddlist-head">
+      <div class="container">
+        <h1>LA LISTE DES 17 OBJECTIFS DE DÉVELOPPEMENT<br>DURABLE (ODD)</h1>
+
+        <p class="oddlist-intro">
+          En 2015, 193 pays membres de l'ONU ont défini 17 Objectifs de développement durable (ODD)
+          à atteindre d'ici à 2030. Découvrez-les de manière interactive !
+        </p>
+
+        <!-- Statistiques -->
+        <div class="odd-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="193">0</span>
+            <span class="stat-label">Pays Membres</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="17">0</span>
+            <span class="stat-label">Objectifs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="2030">0</span>
+            <span class="stat-label">Année Cible</span>
+          </div>
+        </div>
+
+        <!-- Barre de progression -->
+        <div class="progress-container">
+          <div class="progress-title">🎯 Votre progression d'apprentissage</div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="learningProgress"></div>
+          </div>
+          <div class="progress-text">
+            <span id="progressCount">0</span> / 17 objectifs découverts
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENU PRINCIPAL -->
+    <section class="oddlist-content">
+      <div class="container">
+
+        <!-- Roue interactive des ODD -->
+        <div class="oddlist-wheel-container">
+          <div class="oddlist-wheel">
+            <svg viewBox="0 0 400 400" class="odd-circle">
+              <!-- Les sections vont être générées par JS -->
+            </svg>
+            <div class="wheel-center">
+              <div class="center-content">
+                <div class="center-number" id="wheelOddNumber">1</div>
+                <div class="center-title" id="wheelOddTitle">Éradication de la pauvreté</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description détaillée -->
+          <div class="odd-wheel-description" id="wheelDescription">
+            Éliminer la pauvreté sous toutes ses formes et partout dans le monde, en garantissant à tous un niveau de vie décent.
+          </div>
+        </div>
+
+        <!-- SECTION QUIZ -->
+        <div class="quiz-section">
+          <div class="quiz-header">
+            <h2 class="quiz-title">🎮 Testez vos connaissances !</h2>
+            <div class="quiz-stats">
+              <div class="quiz-stat">
+                <span class="quiz-stat-number" id="correctAnswers">0</span>
+                <span class="quiz-stat-label">Bonnes réponses</span>
+              </div>
+              <div class="quiz-stat">
+                <span class="quiz-stat-number" id="wrongAnswers">0</span>
+                <span class="quiz-stat-label">Mauvaises réponses</span>
+              </div>
+              <div class="quiz-stat">
+                <span class="quiz-stat-number" id="quizScore">0</span>
+                <span class="quiz-stat-label">Points</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz-question" id="quizContainer">
+            <p class="quiz-question-text" id="questionText">Chargement...</p>
+            <div class="quiz-options" id="quizOptions">
+              <!-- Options générées dynamiquement -->
+            </div>
+          </div>
+
+          <div class="quiz-feedback" id="quizFeedback" style="display: none;"></div>
+          <button class="quiz-next-btn" id="nextQuestionBtn" style="display: none;">Question Suivante</button>
+
+          <!-- Section de partage -->
+          <div class="share-section">
+            <h3 class="share-title">📢 Partagez votre progression !</h3>
+            <div class="share-buttons">
+              <button class="share-btn facebook" id="shareFacebook">
+                <i class="fab fa-facebook-f"></i>
+                Partager sur Facebook
+              </button>
+              <button class="share-btn whatsapp" id="shareWhatsapp">
+                <i class="fab fa-whatsapp"></i>
+                Partager sur WhatsApp
+              </button>
+              <button class="share-btn twitter" id="shareTwitter">
+                <i class="fab fa-twitter"></i>
+                Partager sur Twitter
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer injecté -->
+  <div id="site-footer"></div>
+
+</body>
+</html>

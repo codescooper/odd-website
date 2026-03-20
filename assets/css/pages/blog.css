@@ -1,0 +1,57 @@
+/* Zone texte */
+.odd4-hero{
+  background:#fff;
+  padding:56px 0 26px;
+}
+
+.odd4-hero h1{
+  margin:0 0 18px;
+  text-align:center;
+  font-size:44px;
+  font-weight:900;
+  color:#0b0b0b;
+}
+
+.odd4-hero p{
+  max-width: 980px;
+  margin: 0 auto 14px;
+  text-align:center;
+  line-height:1.8;
+  color:#222;
+  font-size:15px;
+}
+
+/* Galerie */
+.odd4-gallery{
+  padding:18px 0 70px;
+  background:#fff;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:16px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.gallery-grid img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  display:block;
+  background:#eee;
+  border: 6px solid #f2f2f2; /* effet “cadre” clair */
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .odd4-hero h1{ font-size:32px; }
+  .gallery-grid{ grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid img{ height:160px; }
+}
+
+@media (max-width: 520px){
+  .gallery-grid{ grid-template-columns: 1fr; }
+  .gallery-grid img{ height:200px; }
+}

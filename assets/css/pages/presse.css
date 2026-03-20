@@ -1,0 +1,131 @@
+.page-presse{ background:#fff; }
+
+.presse-head{
+  padding:34px 0 10px;
+  text-align:center;
+}
+
+.presse-head h1{
+  margin:0;
+  font-size:22px;   /* proche du screenshot */
+  font-weight:700;
+  color:#111;
+}
+
+/* ✅ Masonry */
+.masonry{
+  column-count: 3;
+  column-gap: 14px;
+  padding: 18px 0 70px;
+}
+
+.masonry-item{
+  break-inside: avoid;
+  margin: 0 0 14px;
+  background:#fff;
+}
+
+.masonry-item img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius: 2px;
+}
+
+/* ✅ Hover léger */
+.masonry-item img{
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+.masonry-item:hover img{
+  transform: scale(1.01);
+  filter: contrast(1.02);
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .masonry{ column-count: 2; }
+}
+
+@media (max-width: 560px){
+  .masonry{ column-count: 1; }
+}
+
+
+.presse-links-section{
+  padding: 50px 0 80px;
+  background:#fff;
+}
+
+.presse-links-head{
+  text-align:center;
+  margin-bottom:36px;
+}
+
+.presse-links-head h2{
+  margin:0 0 10px;
+  font-size:40px;
+  font-weight:800;
+  color:#111;
+}
+
+.presse-links-head p{
+  max-width:760px;
+  margin:0 auto;
+  line-height:1.7;
+  color:#555;
+}
+
+.presse-links-block{
+  margin-top:34px;
+}
+
+.presse-links-block h3{
+  margin:0 0 18px;
+  font-size:24px;
+  font-weight:800;
+  color:#111;
+}
+
+.presse-links-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:18px;
+}
+
+.presse-link-card{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:20px;
+  background:#f8f9fb;
+  border:1px solid #e7ebf0;
+  border-radius:16px;
+  box-shadow:0 8px 22px rgba(0,0,0,.05);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  color:#111;
+}
+
+.presse-link-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(0,0,0,.09);
+  border-color:rgba(63,156,53,.35);
+}
+
+.presse-link-type{
+  display:inline-flex;
+  align-self:flex-start;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(63,156,53,.10);
+  color:#2b7c2a;
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+.presse-link-card strong{
+  font-size:16px;
+  line-height:1.5;
+}

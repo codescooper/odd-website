@@ -1,0 +1,207 @@
+/* Présentation — styles spécifiques */
+.pres-objectif{
+  background: var(--blue);
+  color:#fff;
+  padding: 46px 0;
+}
+
+.pres-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0 0 10px;
+  font-size:34px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+.pres-icon{
+  display:inline-flex;
+  width:44px;height:44px;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,.15);
+  font-size:22px;
+}
+
+.pres-objectif p{
+  margin:10px 0 0;
+  max-width: 980px;
+  line-height:1.55;
+  opacity:.95;
+}
+
+/* Bande logos + image */
+.pres-banner{
+  background:#fff;
+  padding: 28px 0 10px;
+}
+
+.pres-logos{
+  display:flex;
+  gap:26px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-bottom: 12px;
+}
+
+.pres-logos img{
+  width:110px;
+  height:auto;
+}
+
+.pres-banner__image{
+  display:flex;
+  justify-content:center;
+}
+
+.pres-banner__image img{
+  width:min(860px, 100%);
+  height:auto;
+  display:block;
+}
+
+/* Mission Vision Valeurs */
+.pres-mvv{
+  background: var(--blue);
+  color:#fff;
+  padding: 44px 0;
+}
+
+.pres-mvv__grid{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 26px;
+  align-items:start;
+}
+
+.mvv-card{
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: 20px 18px;
+}
+
+.mvv-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:0 0 12px;
+  font-size:28px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+.mvv-icon{
+  width:40px;height:40px;
+  border-radius:10px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,.12);
+}
+
+.mvv-text{
+  opacity:.95;
+  line-height:1.55;
+  font-size:14px;
+}
+
+.mvv-text ul,
+.mvv-text ol{
+  margin:10px 0 0 18px;
+  padding:0;
+}
+
+.mvv-text li{ margin:8px 0; }
+
+.mvv-side{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* Grille ODD */
+.pres-odd-grid{
+  background:#fff;
+  padding: 26px 0 44px;
+}
+.pres-odd-grid img{
+  width:min(860px,100%);
+  display:block;
+  margin:0 auto;
+}
+
+/* Équipe */
+.pres-team{
+  background: var(--blue);
+  color:#fff;
+  padding: 46px 0 60px;
+}
+
+.team-title{
+  margin:0 0 10px;
+  font-size:42px;
+  font-weight:800;
+}
+
+.team-intro{
+  margin:0 0 28px;
+  opacity:.95;
+  line-height:1.6;
+  max-width: 980px;
+}
+
+.team-grid{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  align-items:start;
+}
+
+.team-card{
+  margin:0;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  overflow:hidden;
+}
+
+.team-card img{
+  width:100%;
+  height: 190px;
+  object-fit: cover;
+  display:block;
+}
+
+.team-card figcaption{
+  padding: 12px 12px 14px;
+}
+
+.team-name{
+  font-weight:800;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:.3px;
+}
+
+.team-role{
+  font-size:12px;
+  opacity:.9;
+  margin-top:6px;
+}
+
+/* Responsive */
+@media (max-width:980px){
+  .pres-mvv__grid{ grid-template-columns: 1fr; }
+  .team-grid{ grid-template-columns: repeat(2, 1fr); }
+  .team-card img{ height: 170px; }
+}
+
+@media (max-width:520px){
+  .team-grid{ grid-template-columns: 1fr; }
+}

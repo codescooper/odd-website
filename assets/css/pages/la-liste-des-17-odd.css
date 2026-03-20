@@ -1,0 +1,761 @@
+/* ========== PAGE ODD LIST ========== */
+
+.page-odd-list {
+  background: #fff;
+}
+
+/* ========== EN-TÊTE ========== */
+
+.oddlist-head {
+  padding: 70px 0 20px;
+  text-align: center;
+}
+
+.oddlist-head h1 {
+  margin: 0 0 18px;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.oddlist-intro {
+  max-width: 980px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #111;
+  font-size: 15px;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+/* ========== STATISTIQUES ========== */
+
+.odd-stats {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  margin: 3rem 0 2rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00adef, #26bde2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* ========== BARRE DE PROGRESSION ========== */
+
+.progress-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 20px;
+  animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+.progress-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 28px;
+  background: #e9ecef;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00adef, #26bde2, #56c02b);
+  width: 0%;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+.progress-text {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ========== CONTENU PRINCIPAL ========== */
+
+.oddlist-content {
+  padding: 20px 0 80px;
+}
+
+/* ========== ROUE DES ODD ========== */
+
+.oddlist-wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.oddlist-wheel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1;
+}
+
+.odd-circle {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+}
+
+.odd-section {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: brightness(1);
+}
+
+.odd-section:hover {
+  filter: brightness(1.15);
+}
+
+.odd-section.active {
+  filter: brightness(0.85);
+}
+
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  fill: white;
+  text-anchor: middle;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.center-content {
+  text-align: center;
+  animation: centerPulse 0.4s ease;
+}
+
+.center-number {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #667eea;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.center-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  max-width: 140px;
+  line-height: 1.3;
+}
+
+@keyframes centerPulse {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.odd-wheel-description {
+  max-width: 600px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.oddlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+/* ========== CARTES ODD ========== */
+
+.odd-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  animation: scaleIn 0.5s ease-out backwards;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid transparent;
+  color: white;
+}
+
+.odd-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.odd-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.odd-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.odd-card:nth-child(4) {
+  animation-delay: 0.25s;
+}
+.odd-card:nth-child(5) {
+  animation-delay: 0.3s;
+}
+.odd-card:nth-child(6) {
+  animation-delay: 0.35s;
+}
+.odd-card:nth-child(7) {
+  animation-delay: 0.4s;
+}
+.odd-card:nth-child(8) {
+  animation-delay: 0.45s;
+}
+.odd-card:nth-child(9) {
+  animation-delay: 0.5s;
+}
+.odd-card:nth-child(10) {
+  animation-delay: 0.55s;
+}
+.odd-card:nth-child(11) {
+  animation-delay: 0.6s;
+}
+.odd-card:nth-child(12) {
+  animation-delay: 0.65s;
+}
+.odd-card:nth-child(13) {
+  animation-delay: 0.7s;
+}
+.odd-card:nth-child(14) {
+  animation-delay: 0.75s;
+}
+.odd-card:nth-child(15) {
+  animation-delay: 0.8s;
+}
+.odd-card:nth-child(16) {
+  animation-delay: 0.85s;
+}
+.odd-card:nth-child(17) {
+  animation-delay: 0.9s;
+}
+
+/* ODD non explorés */
+.odd-card:not(.explored) {
+  opacity: 0.6;
+  filter: grayscale(0.3);
+}
+
+.odd-card.explored {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.odd-card.explored::after {
+  content: '✓';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #4caf50;
+  z-index: 10;
+}
+
+.odd-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.odd-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.odd-card:hover::before {
+  opacity: 1;
+}
+
+.odd-card.active {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.odd-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  opacity: 0.25;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  line-height: 1;
+  color: white;
+}
+
+.odd-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  position: relative;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.odd-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin-top 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.odd-card.active .odd-description {
+  max-height: 200px;
+  margin-top: 1rem;
+}
+
+.odd-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  opacity: 0.9;
+}
+
+/* ========== COULEURS DES 17 ODD ========== */
+
+.odd-card.c1 {
+  background: linear-gradient(135deg, #e5243b, #c41230);
+}
+.odd-card.c2 {
+  background: linear-gradient(135deg, #dda63a, #c89030);
+}
+.odd-card.c3 {
+  background: linear-gradient(135deg, #4c9f38, #3d8b2c);
+}
+.odd-card.c4 {
+  background: linear-gradient(135deg, #c5192d, #a01524);
+}
+.odd-card.c5 {
+  background: linear-gradient(135deg, #ff3a21, #e62e18);
+}
+.odd-card.c6 {
+  background: linear-gradient(135deg, #26bde2, #1ea8cc);
+}
+.odd-card.c7 {
+  background: linear-gradient(135deg, #fcc30b, #e3ae09);
+}
+.odd-card.c8 {
+  background: linear-gradient(135deg, #a21942, #8a1538);
+}
+.odd-card.c9 {
+  background: linear-gradient(135deg, #fd6925, #e45a1f);
+}
+.odd-card.c10 {
+  background: linear-gradient(135deg, #dd1367, #c50f5a);
+}
+.odd-card.c11 {
+  background: linear-gradient(135deg, #fd9d24, #e48b1f);
+}
+.odd-card.c12 {
+  background: linear-gradient(135deg, #bf8b2e, #a97a28);
+}
+.odd-card.c13 {
+  background: linear-gradient(135deg, #3f7e44, #366b39);
+}
+.odd-card.c14 {
+  background: linear-gradient(135deg, #0a97d9, #0886c2);
+}
+.odd-card.c15 {
+  background: linear-gradient(135deg, #56c02b, #4aab25);
+}
+.odd-card.c16 {
+  background: linear-gradient(135deg, #00689d, #005a89);
+}
+.odd-card.c17 {
+  background: linear-gradient(135deg, #19486a, #153d5a);
+}
+
+/* ========== SECTION QUIZ ========== */
+
+.quiz-section {
+  margin: 4rem 0;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  color: white;
+  animation: fadeInUp 0.8s ease-out;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.quiz-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.quiz-stats {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.quiz-stat {
+  text-align: center;
+}
+
+.quiz-stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  display: block;
+  line-height: 1;
+}
+
+.quiz-stat-label {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+}
+
+.quiz-question {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quiz-question-text {
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.quiz-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.quiz-option {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+}
+
+.quiz-option:hover:not(.correct):not(.incorrect) {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.quiz-option.correct {
+  background: #4caf50;
+  border-color: #45a049;
+  animation: pulse 0.5s ease;
+}
+
+.quiz-option.incorrect {
+  background: #f44336;
+  border-color: #da190b;
+  animation: pulse 0.3s ease;
+}
+
+.quiz-option.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.quiz-feedback {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.quiz-next-btn {
+  display: block;
+  margin: 1.5rem auto 0;
+  padding: 1rem 2.5rem;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.quiz-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== PARTAGE SOCIAL ========== */
+
+.share-section {
+  margin-top: 3rem;
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.share-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.share-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.share-btn.facebook {
+  background: #1877f2;
+}
+
+.share-btn.whatsapp {
+  background: #25d366;
+}
+
+.share-btn.twitter {
+  background: #1da1f2;
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 980px) {
+  .oddlist-head h1 {
+    font-size: 30px;
+  }
+
+  .oddlist-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .odd-stats {
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .quiz-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quiz-title {
+    font-size: 1.5rem;
+  }
+
+  .quiz-stats {
+    gap: 1.5rem;
+  }
+
+  .share-buttons {
+    flex-direction: column;
+  }
+
+  .share-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}

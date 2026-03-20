@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Les cibles des 17 ODD — ONG EDUCATION ODD</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="assets/css/00-variables.css">
+  <link rel="stylesheet" href="assets/css/01-base.css">
+  <link rel="stylesheet" href="assets/css/10-layout.css">
+  <link rel="stylesheet" href="assets/css/20-header.css">
+  <link rel="stylesheet" href="assets/css/21-nav.css">
+  <link rel="stylesheet" href="assets/css/90-responsive.css">
+
+  <!-- CSS page -->
+  <link rel="stylesheet" href="assets/css/pages/cibles-odd.css">
+
+  <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script>
+  <script src="assets/js/header.js" defer></script>
+  <script src="assets/js/includes.js" defer></script>
+  <script src="assets/js/pages/odd-targets.js" defer></script>
+</head>
+
+<body>
+
+  <div id="site-header"></div>
+
+  <main class="page-odd-targets">
+
+    <section class="oddtargets-hero">
+      <div class="container">
+        <p class="oddtargets-kicker">Explorer les cibles</p>
+        <h1>Les cibles des 17 ODD</h1>
+        <p class="oddtargets-intro">
+          Faites tourner la roue ou utilisez les flèches pour découvrir les cibles rattachées à chaque Objectif de Développement Durable.
+        </p>
+      </div>
+    </section>
+
+    <section class="oddtargets-experience">
+      <div class="container">
+
+        <div class="oddtargets-topbar">
+          <button class="oddtargets-nav oddtargets-nav--prev" id="oddPrev" type="button" aria-label="ODD précédent">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="oddtargets-status">
+            <span class="oddtargets-status-label">Objectif actif</span>
+            <strong id="oddCurrentNumber">ODD 1</strong>
+          </div>
+
+          <button class="oddtargets-nav oddtargets-nav--next" id="oddNext" type="button" aria-label="ODD suivant">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="oddtargets-layout">
+
+          <!-- Roue -->
+          <section class="oddtargets-wheel-panel">
+            <div class="oddtargets-wheel-wrap">
+              <div class="oddtargets-wheel" id="oddWheel" aria-label="Roue des 17 ODD">
+                <!-- Généré par JS -->
+              </div>
+
+              <div class="oddtargets-wheel-center">
+                <span class="wheel-center-small">ODD actif</span>
+                <strong id="wheelCenterLabel">1</strong>
+              </div>
+            </div>
+
+            <div class="oddtargets-minihelp">
+              Cliquez sur un segment pour afficher les cibles correspondantes.
+            </div>
+          </section>
+
+          <!-- Panneau contenu -->
+          <section class="oddtargets-content-panel">
+            <div class="oddtargets-content-head" id="oddContentHead">
+              <span class="oddtargets-badge" id="oddBadge">ODD 1</span>
+              <h2 id="oddTitle">Pas de pauvreté</h2>
+              <p id="oddSummary">
+                Éliminer la pauvreté sous toutes ses formes et partout dans le monde.
+              </p>
+            </div>
+
+            <div class="oddtargets-targets" id="oddTargetsList">
+              <!-- Généré par JS -->
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+</body>
+</html>

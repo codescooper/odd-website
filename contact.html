@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact – ONG EDUCATION ODD</title>
+
+    <!-- CSS global -->
+  <link rel="stylesheet" href="assets/css/00-variables.css">
+  <link rel="stylesheet" href="assets/css/01-base.css">
+  <link rel="stylesheet" href="assets/css/10-layout.css">
+  <link rel="stylesheet" href="assets/css/20-header.css">
+  <link rel="stylesheet" href="assets/css/21-nav.css">
+  <link rel="stylesheet" href="assets/css/90-responsive.css">
+
+  
+  <link rel="stylesheet" href="assets/css/pages/contact.css">
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main class="contact-page">
+
+    <!-- Bande contact (2 colonnes) -->
+    <section class="contact-band">
+      <div class="container contact-grid">
+
+        <!-- Col gauche -->
+        <div class="contact-left">
+          <h1>Contactez-nous !</h1>
+          <p>
+            N’hésitez pas à nous contacter pour toute question ou préoccupation.
+            Vous pouvez utiliser le formulaire sur notre site web ou nous envoyer un e-mail directement.
+            Nous vous remercions de votre intérêt et nous réjouissons de recevoir de vos nouvelles.
+          </p>
+
+          <div class="contact-info">
+            <h3>Contact</h3>
+            <a href="tel:+2250789084487">+225 07 89 08 44 87</a>
+
+            <h3>Email</h3>
+            <a href="mailto:info@education-odd.com">info@education-odd.com</a>
+          </div>
+        </div>
+
+        <!-- Col droite -->
+        <div class="contact-right">
+          <form class="contact-form" action="#" method="post">
+            <label>Prénoms*</label>
+            <input type="text" placeholder="Vos prénoms" required>
+
+            <label>Nom*</label>
+            <input type="text" placeholder="Votre nom" required>
+
+            <label>Email*</label>
+            <input type="email" placeholder="Votre adresse email" required>
+
+            <label>Message*</label>
+            <textarea rows="4" placeholder="Entrez votre message" required></textarea>
+
+            <button type="submit" class="contact-btn">Soumettre</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Suivez-nous -->
+    <section class="follow">
+      <div class="container">
+        <h2>Suivez nous</h2>
+
+        <div class="follow-icons" aria-label="Réseaux sociaux">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carte -->
+    <section class="map-wrap">
+      <div class="container">
+        <div class="map-box">
+          <!-- Option 1: image temporaire -->
+          <!-- <img src="assets/images/map-placeholder.png" alt="Carte"> -->
+
+          <!-- Option 2: Google Maps embed -->
+          <iframe
+            title="Carte"
+            src="https://www.google.com/maps?q=Abidjan&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Font Awesome (si pas déjà dans header.html) -->
+  <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script>
+
+  <script src="assets/js/includes.js"></script>
+</body>
+</html>

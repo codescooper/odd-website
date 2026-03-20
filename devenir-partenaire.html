@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Partenaires — ONG EDUCATION ODD</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="assets/css/00-variables.css">
+  <link rel="stylesheet" href="assets/css/01-base.css">
+  <link rel="stylesheet" href="assets/css/10-layout.css">
+  <link rel="stylesheet" href="assets/css/20-header.css">
+  <link rel="stylesheet" href="assets/css/21-nav.css">
+  <link rel="stylesheet" href="assets/css/90-responsive.css">
+
+  <!-- CSS page -->
+  <link rel="stylesheet" href="assets/css/pages/partenaire-form.css">
+
+  <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script>
+  <script src="assets/js/header.js" defer></script>
+  <script src="assets/js/includes.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Header injecté -->
+  <div id="site-header"></div>
+  
+  <main class="partner-page">
+
+  <section class="partner-hero">
+    <div class="container">
+      <h1>Rejoignez nos partenaires engagés</h1>
+      <p>
+        Vous représentez une entreprise, une fondation ou une institution publique ?  
+        Devenez acteur du changement aux côtés de l’ONG EDUCATION ODD.
+        <br>Remplissez ce formulaire, notre équipe vous contactera rapidement.
+      </p>
+    </div>
+  </section>
+
+  <section class="partner-form-section">
+    <div class="container">
+
+      <form class="partner-form">
+
+        <label>
+          Nom de l’organisation*
+          <input type="text" required>
+        </label>
+
+        <label>
+          Nom et prénom du référent*
+          <input type="text" required>
+        </label>
+
+        <label>
+          Fonction dans l’organisation
+          <input type="text">
+        </label>
+
+        <label>
+          Adresse email professionnelle*
+          <input type="email" required>
+        </label>
+
+        <label>
+          Numéro de téléphone / WhatsApp*
+          <input type="tel" required>
+        </label>
+
+        <fieldset class="partner-types">
+          <legend>Type de partenariat envisagé</legend>
+
+          <label><input type="checkbox"> Soutien financier</label>
+          <label><input type="checkbox"> Partenariat logistique (matériel, transport…)</label>
+          <label><input type="checkbox"> Appui pédagogique ou éducatif</label>
+          <label><input type="checkbox"> Communication et sensibilisation</label>
+          <label><input type="checkbox"> Autre (à préciser)</label>
+        </fieldset>
+
+        <label>
+          Message*
+          <textarea rows="5" required></textarea>
+        </label>
+
+        <button type="submit" class="btn-primary">
+          Envoyer ma demande de partenariat
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer injecté -->
+<div id="site-footer"></div>

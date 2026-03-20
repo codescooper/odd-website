@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ONG EDUCATION ODD</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Polices “approchées” (à ajuster si tu retrouves les vraies) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#3F9C35;
+      --orange:#FF8200;
+      --blue:#176BE0;
+      --dark:#261F1F;
+      --container:1200px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Montserrat,system-ui,-apple-system,Segoe UI,Roboto,Arial; color:#111;}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--container);margin:0 auto;padding:0 18px;}
+
+    /* HEADER */
+    .header-menu{flex-direction: row; display: flex; position: relative;}
+    header{background:var(--green); color:#fff;}
+    .topbar{display:flex;align-items:center;gap:18px;padding:18px 0;flex-direction:column;}
+    .brand{display:flex;align-items:center;gap:14px; margin: 20px;}
+    .logo{width:78px;height:78px;background:#fff;border-radius:4px;flex:0 0 auto;overflow:hidden;}
+    .brand h1{margin:0;font-size:40px;letter-spacing:1px;font-weight:800}
+    .block-header__nav{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+    nav a{font-weight:600;font-size:14px;letter-spacing:.5px}
+    nav a.active{color:var(--orange); text-decoration:underline; text-underline-offset:8px;}
+    .actions{display:flex;align-items:center;gap:12px}
+    .don{background:var(--orange);color:#fff;border-radius:999px;padding:12px 22px;font-weight:800}
+    /* Code css pour le menu nav */
+    .block-header__nav-links{
+        list-style:none;
+        margin:0;
+        padding:0;
+        display:flex;
+        gap:22px;
+        align-items:center;
+        flex-wrap:wrap;
+        justify-content:center;
+        }
+
+        .block-header-item{ position:relative; }
+
+        .item-content{
+        font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        color: #fff;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        padding: 10px 0;
+        }
+
+        .block-header-item a.item-content{ display:inline-block; }
+
+        .block-header-item a.item-content:hover,
+        .block-header-item button.item-content:hover{
+        opacity:.9;
+        }
+
+        /* Dropdown caret */
+        .caret{
+        display:inline-block;
+        margin-left:8px;
+        width:0;height:0;
+        border-left:5px solid transparent;
+        border-right:5px solid transparent;
+        border-top:6px solid currentColor;
+        transform: translateY(-1px);
+        }
+
+        /* Dropdown area hidden by default */
+        .block-header-item__dropdown-area{
+        position:absolute;
+        top:100%;
+        left:0;
+        padding-top:10px;
+        display:none;
+        z-index:50;
+        }
+
+        /* Dropdown panel */
+        .block-header-item__dropdown{
+        list-style:none;
+        margin:0;
+        padding:10px 0;
+        min-width: 260px;
+        background:#fff;
+        border-radius:10px;
+        box-shadow: 0 18px 50px rgba(0,0,0,.18);
+        }
+
+        .block-header-item__dropdown .item-content{
+        color:#111;
+        text-transform:none;
+        font-weight:600;
+        letter-spacing:0;
+        padding:10px 14px;
+        display:block;
+        width:100%;
+        white-space:normal;
+        }
+
+        .block-header-item__dropdown .item-content:hover{
+        background:#f3f5f7;
+        }
+
+        /* Open on hover (desktop) */
+        @media (hover:hover){
+        .has-dropdown:hover > .block-header-item__dropdown-area{
+            display:block;
+        }
+        }
+
+        /* Open via .open class (mobile/JS) */
+        .has-dropdown.open > .block-header-item__dropdown-area{
+        display:block;
+        }
+
+    /* HERO */
+    .hero{
+      position:relative;
+      min-height:440px;
+      background:#ddd url("hero.jpg") center/cover no-repeat; /* remplace */
+      padding: 50px;
+    }
+    .hero .box{
+      position:absolute; right:5%;
+      background:#fff; width:min(640px,92%);
+      padding:28px 28px 24px;
+      box-shadow:0 18px 60px rgba(0,0,0,.18);
+    }
+    .hero h2{
+      margin:0 0 10px;
+      font-family:"Playfair Display",serif;
+      font-size:44px; line-height:1.05;
+    }
+    .hero p{margin:0 0 18px;color:#333}
+    .btn{display:inline-block;background:var(--orange);color:#fff;border-radius:999px;padding:12px 34px;font-weight:800}
+
+    /* SECTION TITLES */
+    .section{padding:54px 0;}
+    .title{font-size:44px;font-weight:800;text-align:center;margin:0 0 8px}
+    .subtitle{text-align:center;color:#222;margin:0 0 30px}
+
+    /* GRIDS */
+    .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;align-items:start;}
+    .card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,.08)}
+    .card img{width:100%;display:block}
+    .card .pad{padding:18px}
+    .muted{color:#444}
+
+    /* ORANGE BAND */
+    .band{background:var(--orange);color:#fff;}
+    .band h3{margin:0;text-align:center;font-size:44px;font-weight:800}
+    .band .two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:18px}
+    .band .two p{margin:0;opacity:.95}
+    .band .three{display:grid;grid-template-columns:1fr 1fr 1fr;margin-top:18px;}
+
+    /* PARTNERS */
+    .logos{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;align-items:center}
+    .logoBox{width:180px;height:110px;background:#fff;border-radius:14px;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 40px rgba(0,0,0,.08)}
+
+    /* CONTACT */
+    .contact{
+      position:relative;
+      background:#111 url("contact-bg.jpg") center/cover no-repeat; /* remplace */
+      padding:78px 0;
+    }
+    .contact:before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.45)}
+    .contact .container{position:relative}
+    .contact h3{color:#fff;text-align:center;font-size:52px;margin:0 0 8px}
+    .contact p{color:#fff;text-align:center;margin:0 0 26px;opacity:.9}
+    form{max-width:720px;margin:0 auto;background:#fff;border-radius:18px;padding:22px;box-shadow:0 18px 60px rgba(0,0,0,.25)}
+    label{display:block;font-weight:700;margin:12px 0 6px}
+    input,textarea{width:100%;padding:14px;border:1px solid #cfd6df;border-radius:10px;font:inherit}
+    textarea{min-height:140px;resize:vertical}
+
+    /* FOOTER */
+    footer{background:var(--blue);color:#fff;padding:26px 0}
+    .footerGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;align-items:start}
+    .footerGrid a{display:block;margin:6px 0;font-weight:600}
+    .newsletter{display:flex;flex-direction:column;align-items:center}
+    .newsletter input{border:none;margin:10px;}
+    .newsletter .send{background:var(--dark);color:#fff;border-radius:999px;padding:12px 18px;font-weight:800;border:none}
+    .copy{margin-top:14px;font-size:13px;opacity:.9}
+
+    /* SECION ABOUT */
+    .section-about{
+         display:flex;
+         gap:20px;   
+         flex-direction: column;
+         align-items: center;
+    }
+    .section-about div{
+        display: flex;
+        flex: 1;
+    }
+    .about-box{
+        padding: 30px;
+    }
+    .box-propos{
+        display:flex;
+        flex-direction: column;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px){
+      nav{justify-content:flex-start}
+      .grid3{grid-template-columns:1fr}
+      .band .two{grid-template-columns:1fr}
+      .hero .box{position:static; margin:18px auto}
+      .hero{padding:18px 0; min-height:auto}
+      .footerGrid{grid-template-columns:1fr}
+    }
+
+
+    /* --- Hamburger (caché en desktop) --- */
+    .burger{
+      display:none;
+      width:44px;
+      height:44px;
+      border:0;
+      background:transparent;
+      cursor:pointer;
+      padding:8px;
+    }
+
+    .burger span{
+      display:block;
+      height:3px;
+      margin:7px 0;
+      background:#fff;          /* adapte si ton header n'est pas sur fond sombre */
+      border-radius:999px;
+    }
+
+    /* --- Mobile layout --- */
+    @media (max-width: 980px){
+
+      /* met header-menu en ligne et aligne proprement */
+      .header-menu{
+        display:flex;
+        align-items:center;
+        gap:12px;
+        width:100%;
+      }
+
+      /* burger visible */
+      .burger{ display:block; margin-left:auto; }
+
+      /* actions option: tu peux les cacher ou les mettre dans le menu */
+      .actions{
+        display:none; /* ✅ le plus simple */
+      }
+
+      /* le menu devient un panneau déroulant */
+      .block-header__nav{
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        top:100%;                /* s'ouvre juste sous le header-menu */
+        background:inherit;       /* reprend la couleur du header si tu as un fond */
+        padding:12px 18px 18px;
+        z-index:999;
+        border-top:1px solid rgba(255,255,255,.2);
+      }
+
+      /* quand ouvert */
+      .block-header__nav.nav-open{
+        display:block;
+      }
+
+      /* liste en colonne */
+      .block-header__nav-links{
+        display:flex;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:8px;
+      }
+
+      .block-header-item{
+        width:100%;
+      }
+
+      .item-content{
+        width:100%;
+        text-align:left;
+        padding:10px 0;
+      }
+
+      /* ✅ dropdowns en mobile : on désactive le hover et on ouvre en accordéon */
+      .block-header-item__dropdown-area{
+        position:static;
+        padding-top:6px;
+        display:none;
+      }
+
+      .has-dropdown.open > .block-header-item__dropdown-area{
+        display:block;
+      }
+
+      .block-header-item__dropdown{
+        width:100%;
+        min-width:0;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container topbar">
+      <h1>ONG EDUCATION ODD</h1>
+      <div class="header-menu">
+          <div class="brand">
+            <div class="logo"><img src="assets/images/logo-entete.avif" alt="Logo EDUCATION ODD" width="78" height="78" /></div>
+          </div>
+
+          <button class="burger" type="button"
+            aria-label="Ouvrir le menu"
+            aria-controls="mainNav"
+            aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+      
+          <nav id="mainNav" class="block-header__nav" aria-label="Navigation principale">
+              <ul class="block-header__nav-links">
+                  <li class="block-header-item">
+                  <a class="item-content" href="/">ACCUEIL</a>
+                  </li>
+
+                  <li class="block-header-item">
+                  <a class="item-content" href="/presentation">PRESENTATION</a>
+                  </li>
+
+                  <li class="block-header-item">
+                  <a class="item-content" href="/activites">ACTIVITES</a>
+                  </li>
+
+                  <li class="block-header-item">
+                  <a class="item-content" href="/nos-projets">NOS PROJETS</a>
+                  </li>
+
+                  <li class="block-header-item">
+                  <a class="item-content" href="/blog">BLOG</a>
+                  </li>
+
+                  <!-- ENGAGEMENT (dropdown) -->
+                  <li class="block-header-item has-dropdown">
+                  <button class="item-content dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+                      ENGAGEMENT
+                      <span class="caret" aria-hidden="true"></span>
+                  </button>
+
+                  <div class="block-header-item__dropdown-area" role="menu">
+                      <ul class="block-header-item__dropdown">
+                      <li class="block-header-item">
+                          <a class="item-content" href="/dans-lodd-3-sante-et-bien-etre">Dans l’ODD 3 (Santé et bien-être)</a>
+                      </li>
+                      <li class="block-header-item">
+                          <a class="item-content" href="/dans-lodd-4-education-de-qualite">Dans l’ODD 4 (Éducation de qualité)</a>
+                      </li>
+                      </ul>
+                  </div>
+                  </li>
+
+                  <!-- ESPACE ODD (dropdown) -->
+                  <li class="block-header-item has-dropdown">
+                  <button class="item-content dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+                      ESPACE ODD
+                      <span class="caret" aria-hidden="true"></span>
+                  </button>
+
+                  <div class="block-header-item__dropdown-area" role="menu">
+                      <ul class="block-header-item__dropdown">
+                      <li class="block-header-item">
+                          <a class="item-content" href="/votre-participation-au-developpement-durable">Votre participation au développement durable</a>
+                      </li>
+                      <li class="block-header-item">
+                          <a class="item-content" href="/la-liste-des-17-odd">La liste des 17 ODD</a>
+                      </li>
+                      <li class="block-header-item">
+                          <a class="item-content" href="/les-cibles-des-17-odd-a-atteindre-pour-les-pays-dici-2030">
+                          Les cibles des 17 ODD à atteindre pour les pays d'ici 2030
+                          </a>
+                      </li>
+                      </ul>
+                  </div>
+                  </li>
+
+                  <li class="block-header-item">
+                  <a class="item-content" href="/presse">PRESSE</a>
+                  </li>
+
+                  <!-- PARTENAIRES (dropdown) -->
+                  <li class="block-header-item has-dropdown">
+                  <button class="item-content dropdown-trigger" type="button" aria-haspopup="true" aria-expanded="false">
+                      PARTENAIRES
+                      <span class="caret" aria-hidden="true"></span>
+                  </button>
+
+                  <div class="block-header-item__dropdown-area" role="menu">
+                      <ul class="block-header-item__dropdown">
+                      <li class="block-header-item">
+                          <a class="item-content" href="/partenaires">Partenaires</a>
+                      </li>
+                      <li class="block-header-item">
+                          <a class="item-content" href="/devenir-partenaire">Devenir partenaire</a>
+                      </li>
+                      </ul>
+                  </div>
+                  </li>
+
+                  <li class="block-header-item">
+                  <a class="item-content" href="/contact">CONTACT</a>
+                  </li>
+              </ul>
+              </nav>
+
+      
+          <div class="actions">
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a class="don" href="#">FAIRE UN DON</a>
+          </div>
+      </div>
+    </div>
+  </header>
+
+<section class="hero">
+  <div class="box">
+    <h2>À chacun sa contribution à l'atteinte d'un des 17 objectifs de développement durable (ODD)</h2>
+    <p class="muted">notre choix : agir dans l’ODD 3 (accès à la santé) et dans l’ODD 4 (éducation de qualité)</p>
+    <a class="btn" href="#">Agir</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title">PROMOTION DES 17 ODD</h2>
+    <p class="subtitle"><strong>ACTION DANS L’ODD 3 (SANTÉ ET BIEN-ÊTRE) :</strong> ACCOMPAGNER LE CENTRE NATIONAL DE TRANSFUSION SANGUINE DE CÔTE D’IVOIRE (CNTS-CI) <br> 
+        <strong>ACTION DANS L'ODD 4 (ÉDUCATION DE QUALITÉ) :</strong> PROMOTION DE L'ÉDUCATION DE QUALITÉ EN MILIEU SCOLAIRE ET ESTUDIANTIN
+    </p>
+
+    <div class="grid3">
+      <div>
+        <div class="card"><img src="left.jpg" alt="1ere image"></div>
+        <div class="card" style="margin-top:18px">
+          <div class="pad">
+            <h3 style="margin:0 0 8px;font-size:22px;font-weight:800">Notre impact depuis 2021</h3>
+            <p class="muted" style="margin:0">Plus de <strong>60 campagnes de sensibilisation suivies de 60 collectes de poches de sang.</strong> Ainsi l’ONG EDUCATION ODD a sensibilisé <strong>plus de 24 000 personnes</strong> sur les objectifs de développement durable et sur le don de sang et a permis au CNTS-CI de collecter <strong>plus de 4 000 poches de sang</strong> au 31 décembre 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card"><img src="odd-grid.jpg" alt="Objectifs de développement durable"></div>
+
+      <div class="card"><img src="right.jpg" alt="3eme image"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-about">
+  <div class="container about-grid">
+    <div class="about-box box-propos">
+      <h2>À propos de nous</h2>
+      <p>
+        EDUCATION ODD est une organisation non gouvernementale ivoirienne engagée dans la mise en œuvre des Objectifs de Développement Durable (ODD), avec un accent particulier dans :
+      </p>
+      <ul>
+        <li>la promotion et la vulgarisation des 17 objectifs de développement durable auprès de toutes les couches socioprofessionnelles ;</li>
+        <li>l'ODD 3 (bonne santé et bien-être) : campagnes de sensibilisation + collectes de sang ;</li>
+        <li>l’ODD 4 (éducation de qualité) : programmes de lecture, éveil scientifique, environnemental, entrepreneurial et leadership.</li>
+      </ul>
+    </div>
+
+    <div class="about-box">bloc 2</div>
+    <div class="about-box">bloc 3</div>
+  </div>
+</section>
+
+<section class="band section">
+  <div class="container">
+    <h3>NOS PROJETS</h3>
+    <div class="two">
+      <p>Chez EDUCATION ODD, chaque projet dans l’ODD 3, est une réponse concrète à la réduction du taux de mortalité maternelle et infantile (70 % des poches de sang collectées sont utilisées par le couple mère-enfant)</p>
+      <p>Chez EDUCATION ODD, chaque projet dans l’ODD 4 est une réponse concrète à réduction de la déscolarisation des élèves et des étudiants due à un manque de promotion de repère et de modèles de réussite, auprès des jeunes.</p>
+    </div>
+    <div class="three">
+        <div class="img">1</div>
+        <div class="img">2</div>
+        <div class="img">3</div>
+    </div>
+    <div class="two">
+        <div class="bloc-txt"><h2>du 27 février au 10 décembre 2026</h2><p>20 campagnes de sensibilisation suivies de 20 collectes de poche de sang =  11 000 000F CFA</p></div>
+        <div class="bloc-txt"><h2>du 21 avril au 5 décembre 2026 </h2><p>5 campagnes de sensibilisation suivies de 5 programmes de promotion de l'éducation de qualité = 12 300.000F CFA</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="title">Partenaires</h2>
+    <p class="subtitle">Des alliances pour un impact durable</p>
+    <div class="logos">
+      <div class="logoBox">Logo</div>
+      <div class="logoBox">Logo</div>
+      <div class="logoBox">Logo</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <h3>Contactez-nous</h3>
+    <p>Pour en savoir plus sur nos initiatives et projets.</p>
+    <form>
+      <label>Vos nom et prénom ici</label>
+      <input placeholder="Entrez vos nom et prénom" />
+      <label>Votre adresse e-mail*</label>
+      <input placeholder="Entrez votre e-mail" />
+      <label>Votre message ici*</label>
+      <textarea placeholder="Écrivez votre message"></textarea>
+      <div style="margin-top:16px;text-align:center">
+        <button class="btn" type="button">Soumettre votre message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footerGrid">
+      <div>
+        <a href="#">ACCUEIL</a>
+        <a href="#">PRESENTATION</a>
+        <a href="#">ACTIVITES</a>
+      </div>
+      <div>
+        <a href="#">NOS PROJETS</a>
+        <a href="#">PRESSE</a>
+        <a href="#">FAIRE UN DON</a>
+      </div>
+      <div>
+        <div class="newsletter">
+          <input placeholder="Entrez votre e-mail validé" />
+          <button class="send" type="button">Soumettre votre demande maintenant</button>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2025. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+
+<script>
+    (() => {
+      const burger = document.querySelector(".burger");
+      const nav = document.querySelector("#mainNav");
+      const mobileQuery = window.matchMedia("(max-width: 980px)");
+
+      if (!burger || !nav) return;
+
+      // --- Burger menu ---
+      burger.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("nav-open");
+        burger.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      // Fermer menu sur clic lien (mobile)
+      nav.addEventListener("click", (e) => {
+        if (e.target.closest("a") && mobileQuery.matches) {
+          nav.classList.remove("nav-open");
+          burger.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // --- Dropdown accordéon en mobile seulement ---
+      const dropdownButtons = nav.querySelectorAll(".has-dropdown > .dropdown-trigger");
+
+      dropdownButtons.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          if (!mobileQuery.matches) return;
+
+          const li = e.currentTarget.closest(".has-dropdown");
+          const isOpen = li.classList.toggle("open");
+          btn.setAttribute("aria-expanded", String(isOpen));
+
+          // ferme les autres dropdowns
+          nav.querySelectorAll(".has-dropdown").forEach((other) => {
+            if (other !== li) {
+              other.classList.remove("open");
+              const b = other.querySelector(".dropdown-trigger");
+              if (b) b.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      });
+
+      // Fermer si clic hors header
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("header")) {
+          nav.classList.remove("nav-open");
+          burger.setAttribute("aria-expanded", "false");
+          nav.querySelectorAll(".has-dropdown").forEach((li) => li.classList.remove("open"));
+        }
+      });
+
+      // Quand on repasse en desktop, on ferme tout proprement
+      mobileQuery.addEventListener("change", () => {
+        if (!mobileQuery.matches) {
+          nav.classList.remove("nav-open");
+          burger.setAttribute("aria-expanded", "false");
+          nav.querySelectorAll(".has-dropdown").forEach((li) => {
+            li.classList.remove("open");
+            const b = li.querySelector(".dropdown-trigger");
+            if (b) b.setAttribute("aria-expanded", "false");
+          });
+        }
+      });
+    })();
+
+</script>
+
+</html>
