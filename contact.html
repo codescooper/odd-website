@@ -19,50 +19,54 @@
 
 <body>
   <div id="site-header"></div>
-
+  <div class="spacer"></div>
   <main class="contact-page">
 
-    <!-- Bande contact (2 colonnes) -->
-    <section class="contact-band">
-      <div class="container contact-grid">
+    <!-- Section contact -->
+    <section class="contact">
+      <div class="container">
+        <h1>Contactez-nous</h1>
+        <p class="contact-subtitle">Pour en savoir plus sur nos initiatives et projets.</p>
 
-        <!-- Col gauche -->
-        <div class="contact-left">
-          <h1>Contactez-nous !</h1>
-          <p>
-            N’hésitez pas à nous contacter pour toute question ou préoccupation.
-            Vous pouvez utiliser le formulaire sur notre site web ou nous envoyer un e-mail directement.
-            Nous vous remercions de votre intérêt et nous réjouissons de recevoir de vos nouvelles.
-          </p>
+        <form class="contact-form">
+          <label>Vos nom et prénom ici</label>
+          <input type="text" placeholder="Entrez vos nom et prénom" required>
 
-          <div class="contact-info">
-            <h3>Contact</h3>
-            <a href="tel:+2250789084487">+225 07 89 08 44 87</a>
+          <label>Votre adresse e-mail*</label>
+          <input type="email" placeholder="Entrez votre e-mail" required>
 
-            <h3>Email</h3>
-            <a href="mailto:info@education-odd.com">info@education-odd.com</a>
+          <label>Votre message ici*</label>
+          <textarea placeholder="Écrivez votre message" required></textarea>
+
+          <div style="margin-top:16px;text-align:center">
+            <button class="btn btn-don" type="submit">Soumettre votre message</button>
+          </div>
+        </form>
+
+        <!-- Infos de contact -->
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <strong>Téléphone</strong><br>
+              <a href="tel:+2250789084487">+225 07 89 08 44 87</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong><br>
+              <a href="mailto:info@education-odd.com">info@education-odd.com</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Localisation</strong><br>
+              Abidjan, Côte d'Ivoire
+            </div>
           </div>
         </div>
-
-        <!-- Col droite -->
-        <div class="contact-right">
-          <form class="contact-form" action="#" method="post">
-            <label>Prénoms*</label>
-            <input type="text" placeholder="Vos prénoms" required>
-
-            <label>Nom*</label>
-            <input type="text" placeholder="Votre nom" required>
-
-            <label>Email*</label>
-            <input type="email" placeholder="Votre adresse email" required>
-
-            <label>Message*</label>
-            <textarea rows="4" placeholder="Entrez votre message" required></textarea>
-
-            <button type="submit" class="contact-btn">Soumettre</button>
-          </form>
-        </div>
-
       </div>
     </section>
 
@@ -106,5 +110,12 @@
   <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script>
 
   <script src="assets/js/includes.js"></script>
+
+  <script>
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Merci pour votre message. Nous vous contacterons bientôt.');
+    });
+  </script>
 </body>
 </html>

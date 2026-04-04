@@ -115,29 +115,55 @@
   transition:transform .6s ease;
 }
 
+/* SEGMENTS CORRIGÉS */
 .oddtargets-segment{
   position:absolute;
   top:50%;
   left:50%;
-  width:130px;
+
+  width:100px;
   height:52px;
-  margin-left:-65px;
+
+  margin-left:-59px;
   margin-top:-26px;
+
   border:none;
   border-radius:999px;
+
   color:#fff;
   font-weight:800;
+  font-size:12px;
+  line-height:1;
+
   cursor:pointer;
   box-shadow:0 6px 18px rgba(0,0,0,.18);
-  transition:.25s ease;
-  font-size:14px;
-  padding:0 10px;
-  transform:rotate(var(--angle)) translateY(var(--translateY));
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:0 12px;
+  white-space:nowrap;
+  text-align:center;
+  overflow:visible;
+
+  transform: rotate(var(--angle)) translateY(calc(var(--translateY) - 30px));
+  transition:transform .25s ease, filter .25s ease, box-shadow .25s ease;
+}
+
+/* Le texte reste droit */
+.oddtargets-segment span{
+  display:block;
+  transform:rotate(calc(-1 * var(--angle)));
+  transform-origin:center;
+  white-space:nowrap;
+  text-align:center;
+  pointer-events:none;
 }
 
 .oddtargets-segment:hover{
   transform:rotate(var(--angle)) translateY(var(--translateY)) scale(1.08);
-  filter:brightness(1.1);
+  filter:brightness(1.08);
 }
 
 .oddtargets-segment.active{
@@ -257,7 +283,7 @@
 /* RESPONSIVE */
 @media (max-width: 1200px){
   :root{
-    --wheel-size: 440px;
+    --wheel-size: 460px;
   }
 
   .oddtargets-layout{
@@ -270,6 +296,15 @@
 
   .oddtargets-content-panel{
     order:2;
+  }
+
+  .oddtargets-segment{
+    width:108px;
+    height:48px;
+    margin-left:-54px;
+    margin-top:-24px;
+    font-size:11px;
+    padding:0 10px;
   }
 }
 
@@ -291,11 +326,11 @@
   }
 
   .oddtargets-segment{
-    width:92px;
-    height:42px;
-    margin-left:-46px;
-    margin-top:-21px;
-    font-size:11px;
+    width:82px;
+    height:38px;
+    margin-left:-41px;
+    margin-top:-19px;
+    font-size:9px;
     padding:0 6px;
   }
 
