@@ -253,6 +253,9 @@ window.initOddTargetsPage = function initOddTargetsPage() {
   function updateUI() {
     const odd = oddTargetsData[currentIndex];
 
+    const angle = (360 / total) * currentIndex;
+    wheel.style.transform = `rotate(${-angle}deg)`;
+
     oddCurrentNumber.textContent = `ODD ${odd.id}`;
     wheelCenterLabel.textContent = odd.id;
     oddBadge.textContent = `ODD ${odd.id}`;

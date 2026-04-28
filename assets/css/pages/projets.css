@@ -20,7 +20,7 @@
 
 /* INTRO */
 .projets-intro {
-  background:#d81b60;
+  background:#0c1b2a;
   color:#fff;
   padding:40px 0;
 }
@@ -32,12 +32,12 @@
 
 /* BLOCS IMAGE / TEXTE */
 .projet-bloc {
-  background:#ffd6e5;
+  background:#ff9800;
   padding:60px 0;
 }
 
 .projet-bloc.alt {
-  background:#ffd6e5;
+  background:#ff9800;
 }
 
 .projet-grid {
@@ -112,6 +112,20 @@
   padding:10px;
   text-align:center;
   border-radius:999px;
+}
+
+/* BANDE ARGUMENTAIRE */
+.projets-argument {
+  background:#ffd6e5;
+  padding:40px 0;
+  text-align:center;
+}
+
+.projets-argument p {
+  max-width:900px;
+  line-height:1.6;
+  font-size:18px;
+  font-weight:600;
 }
 
 /* RESPONSIVE */

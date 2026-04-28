@@ -16,10 +16,11 @@
   <link rel="stylesheet" href="assets/css/20-header.css">
   <link rel="stylesheet" href="assets/css/21-nav.css">
   <link rel="stylesheet" href="assets/css/90-responsive.css">
-  <!-- CSS SPÉCIFIQUE À LA PAGE -->
-  <link rel="stylesheet" href="assets/css/pages/presentation.css"> 
-  <link rel="stylesheet" href="assets/css/pages/activites.css">
-  <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script></head>
+
+  <!-- CSS spécifique home -->
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+
+  <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script>
   <script src="assets/js/header.js" defer></script>
   <script src="assets/js/includes.js" defer></script>
 </head>
@@ -29,40 +30,79 @@
   <!-- HEADER -->
   <div id="site-header"></div>
 
- <!-- HERO -->
-  <section class="hero">
-    <div class="box">
-      <h2>À chacun sa contribution à l'atteinte d'un des 17 objectifs de développement durable (ODD)</h2>
-      <p class="muted">notre choix : agir dans l’ODD 3 (accès à la santé) et dans l’ODD 4 (éducation de qualité)</p>
-      <a class="btn" href="#">Agir</a>
-    </div>
-  </section>
+  <!-- HERO -->
+  <section class="hero hero-premium">
+    <div class="hero-overlay"></div>
 
-  <section class="section">
-    <div class="container">
-      <h2 class="title">PROMOTION DES 17 ODD</h2>
-      <p class="subtitle"><strong>ACTION DANS L’ODD 3 (SANTÉ ET BIEN-ÊTRE) :</strong> ACCOMPAGNER LE CENTRE NATIONAL DE TRANSFUSION SANGUINE DE CÔTE D’IVOIRE (CNTS-CI) <br> 
-          <strong>ACTION DANS L'ODD 4 (ÉDUCATION DE QUALITÉ) :</strong> PROMOTION DE L'ÉDUCATION DE QUALITÉ EN MILIEU SCOLAIRE ET ESTUDIANTIN
-      </p>
+    <div class="container hero-content">
 
-      <div class="grid3">
-        <div>
-          <div class="card"><img src="assets/images/impact.jpg" alt="1ere image"></div>
-          <div class="card" style="margin-top:18px">
-            <div class="pad">
-              <h3 style="margin:0 0 8px;font-size:22px;font-weight:800">Notre impact depuis 2021</h3>
-              <p class="muted" style="margin:0">Plus de <strong>60 campagnes de sensibilisation suivies de 60 collectes de poches de sang.</strong> Ainsi l’ONG EDUCATION ODD a sensibilisé <strong>plus de 24 000 personnes</strong> sur les objectifs de développement durable et sur le don de sang et a permis au CNTS-CI de collecter <strong>plus de 4 000 poches de sang</strong> au 31 décembre 2025</p>
-            </div>
-          </div>
+      <div class="hero-box">
+        <h1>À chacun sa contribution à l'atteinte d'un des 17 objectifs de développement durable (ODD)</h1>
+
+        <p class="muted hero-subtext">
+          notre choix : agir dans l’ODD 3 (accès à la santé) et dans l’ODD 4 (éducation de qualité)
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-don" href="#">FAIRE UN DON</a>
+          <a class="btn btn-light" href="presentation.html">Découvrir l’ONG</a>
         </div>
 
-        <div class="card"><img src="assets/images/objectif-odd.webp" alt="Objectifs de développement durable"></div>
-
-        <div class="card"><img src="assets/images/promotion.jpg" alt="3eme image"></div>
+        <div class="hero-socials">
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- IMPACT -->
+  <section class="section impact-section">
+    <div class="container">
+      <h2 class="title">PROMOTION DES 17 ODD</h2>
+      <p class="subtitle">
+        <strong>ACTION DANS L’ODD 3 (SANTÉ ET BIEN-ÊTRE) :</strong>
+        ACCOMPAGNER LE CENTRE NATIONAL DE TRANSFUSION SANGUINE DE CÔTE D’IVOIRE (CNTS-CI)
+        <br>
+        <strong>ACTION DANS L'ODD 4 (ÉDUCATION DE QUALITÉ) :</strong>
+        PROMOTION DE L'ÉDUCATION DE QUALITÉ EN MILIEU SCOLAIRE ET ESTUDIANTIN
+      </p>
+
+      <div class="impact-highlight">
+        <div class="impact-visual">
+          <img src="assets/images/impact.jpg" alt="Impact ONG EDUCATION ODD">
+        </div>
+
+        <div class="impact-content">
+          <span class="impact-badge">Notre impact depuis 2021</span>
+
+          <div class="impact-stats">
+            <div class="impact-stat">
+              <strong>60+</strong>
+              <span>campagnes de sensibilisation</span>
+            </div>
+
+            <div class="impact-stat">
+              <strong>24 000+</strong>
+              <span>personnes sensibilisées</span>
+            </div>
+
+            <div class="impact-stat">
+              <strong>4 000+</strong>
+              <span>poches de sang collectées</span>
+            </div>
+          </div>
+
+          <p>
+            Plus de <strong>60 campagnes de sensibilisation suivies de 60 collectes de poches de sang.</strong>
+            Ainsi l’ONG EDUCATION ODD a sensibilisé <strong>plus de 24 000 personnes</strong> sur les objectifs de développement durable et sur le don de sang et a permis au CNTS-CI de collecter <strong>plus de 4 000 poches de sang</strong> au 31 décembre 2025.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
   <section class="section section-about">
     <div class="container about-grid">
       <div class="about-box box-propos">
@@ -72,32 +112,49 @@
         </p>
         <ul>
           <li>la promotion et la vulgarisation des 17 objectifs de développement durable auprès de toutes les couches socioprofessionnelles ;</li>
-          <li>l'ODD 3 (bonne santé et bien-être) : campagnes de sensibilisation + collectes de sang ;</li>
-          <li>l’ODD 4 (éducation de qualité) : programmes de lecture, éveil scientifique, environnemental, entrepreneurial et leadership.</li>
+          <li>l'ODD 3 (bonne santé et bien-être) : campagnes de sensibilisation sur le don de sang et collectes de poches de sang dans tout le pays ;</li>
+          <li>l’ODD 4 (éducation de qualité) : promotion de l’éducation de qualité en encourageant l’excellence dans les établissements scolaires et estudiantins par la mise en œuvre de programmes de lecture, d’éveil scientifique, environnemental, entrepreneurial et de leadership.</li>
         </ul>
       </div>
 
-      <div class="about-box"><img src="assets/images/promotion.jpg" alt="3eme image"></div>
-      <div class="about-box"><img src="assets/images/promotion.jpg" alt="3eme image"></div>
+      <div class="about-box">
+        <img src="assets/images/promotion.jpg" alt="Promotion des ODD">
+      </div>
+
+      <div class="about-box">
+        <img src="assets/images/promotion.jpg" alt="Éducation de qualité">
+      </div>
     </div>
   </section>
 
+  <!-- PROJETS -->
   <section class="band section">
     <div class="container">
       <h3>Nos Projets</h3>
+
       <div class="two">
         <div>
-          <p>Chez EDUCATION ODD, chaque projet dans l’ODD 3 est une réponse concrète à la réduction du taux de mortalité maternelle et infantile (70% des poches de sang collectées sont utilisées par le couple mère-enfant).</p>
+          <p>
+            Chez EDUCATION ODD, chaque projet dans l’ODD 3 est une réponse concrète à la réduction du taux de mortalité maternelle et infantile (70% des poches de sang collectées sont utilisées par le couple mère-enfant).
+          </p>
         </div>
         <div>
-          <p>Chez EDUCATION ODD, chaque projet dans l’ODD 4 est une réponse concrète à la réduction de la déscolarisation des élèves et des étudiants due à un manque de promotion de repères et de modèles de réussite auprès des jeunes.</p>
+          <p>
+            Chez EDUCATION ODD, chaque projet dans l’ODD 4 est une réponse concrète à la réduction de la déscolarisation des élèves et des étudiants due à un manque de promotion de repères et de modèles de réussite auprès des jeunes.
+          </p>
         </div>
       </div>
 
       <div class="three">
-        <div class="img"><img class="img-projet" src="assets/images/20231013_131906.jpg" alt="Projet ODD 3"></div>
-        <div class="img"><img class="img-projet" src="assets/images/20250414_094148.jpg" alt="Collecte de sang"></div>
-        <div class="img"><img class="img-projet" src="assets/images/poche-de-sang.jpg" alt="Initiative santé"></div>
+        <div class="img">
+          <img class="img-projet" src="assets/images/20231013_131906.jpg" alt="Projet ODD 3">
+        </div>
+        <div class="img">
+          <img class="img-projet" src="assets/images/20250414_094148.jpg" alt="Collecte de sang">
+        </div>
+        <div class="img">
+          <img class="img-projet" src="assets/images/poche-de-sang.jpg" alt="Initiative santé">
+        </div>
       </div>
 
       <div class="two">
@@ -113,16 +170,17 @@
     </div>
   </section>
 
+  <!-- PARTENAIRES -->
   <section class="section">
     <div class="container">
       <h2 class="title">Partenaires</h2>
       <p class="subtitle">Des alliances pour un impact durable</p>
+
       <div class="logos-wrapper">
         <div class="logos-container">
           <div class="logoBox"><img class="logo-part" src="assets/images/partenaires/logo_mshpcmu.png" alt="Partenaire 1"></div>
           <div class="logoBox"><img class="logo-part" src="assets/images/partenaires/cnts.png" alt="Partenaire 2"></div>
           <div class="logoBox"><img class="logo-part" src="assets/images/partenaires/logo-carre-dor.png" alt="Partenaire 3"></div>
-          <!-- Duplication pour l'effet continu -->
           <div class="logoBox"><img class="logo-part" src="assets/images/partenaires/logo_mshpcmu.png" alt="Partenaire 1"></div>
           <div class="logoBox"><img class="logo-part" src="assets/images/partenaires/cnts.png" alt="Partenaire 2"></div>
           <div class="logoBox"><img class="logo-part" src="assets/images/partenaires/logo-carre-dor.png" alt="Partenaire 3"></div>
@@ -131,19 +189,24 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="contact">
     <div class="container">
       <h3>Contactez-nous</h3>
       <p>Pour en savoir plus sur nos initiatives et projets.</p>
+
       <form>
         <label>Vos nom et prénom ici</label>
         <input placeholder="Entrez vos nom et prénom" />
+
         <label>Votre adresse e-mail*</label>
         <input placeholder="Entrez votre e-mail" />
+
         <label>Votre message ici*</label>
         <textarea placeholder="Écrivez votre message"></textarea>
+
         <div style="margin-top:16px;text-align:center">
-          <button class="btn" type="button">Soumettre votre message</button>
+          <button class="btn btn-don" type="submit">Soumettre votre message</button>
         </div>
       </form>
     </div>
@@ -152,8 +215,12 @@
   <!-- FOOTER -->
   <div id="site-footer"></div>
 
+  <script>
+    document.querySelector('.contact form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Merci pour votre message. Nous vous contacterons bientôt.');
+    });
+  </script>
+
 </body>
-
-<script src="assets/js/header.js" defer></script>
-
 </html>

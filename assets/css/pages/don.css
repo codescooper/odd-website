@@ -1,0 +1,180 @@
+/* Page DON */
+.page-don {
+  background: #fff;
+}
+
+/* Hero */
+.don-hero {
+  background: linear-gradient(135deg, #FF8200 0%, #f57c00 100%);
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.don-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+
+.don-hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.don-phrase {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0 0;
+}
+
+/* Impact */
+.don-impact {
+  padding: 60px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.don-impact h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 40px;
+  color: #333;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stat {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.stat strong {
+  display: block;
+  font-size: 32px;
+  color: #FF8200;
+  margin-bottom: 10px;
+}
+
+.stat span {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Montants */
+.don-amounts {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.don-amounts h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 40px;
+  color: #333;
+}
+
+.amounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.amount-btn {
+  background: #fff;
+  border: 2px solid #FF8200;
+  color: #FF8200;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.amount-btn:hover,
+.amount-btn.selected {
+  background: #FF8200;
+  color: #fff;
+}
+
+.amount-btn.other {
+  background: #FF8200;
+  color: #fff;
+}
+
+/* CTA */
+.don-cta {
+  background: #111;
+  color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.don-cta h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+
+.don-cta p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.don-btn {
+  display: inline-block;
+  background: #FF8200;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(255,130,0,.28);
+  transition: all 0.3s ease;
+}
+
+.don-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(255,130,0,.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .don-hero h1 {
+    font-size: 36px;
+  }
+  .don-hero p {
+    font-size: 16px;
+  }
+  .don-impact h2,
+  .don-amounts h2,
+  .don-cta h2 {
+    font-size: 28px;
+  }
+  .amounts-grid {
+    grid-template-columns: 1fr;
+  }
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+}
