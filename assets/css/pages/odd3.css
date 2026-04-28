@@ -35,10 +35,11 @@
 
 .gallery-grid img{
   width:100%;
-  height:170px;        /* hauteur uniforme comme sur ta maquette */
+  height:200px;
   object-fit:cover;
+  object-position:top;
   display:block;
-  border-radius:0;     /* carré comme l’aperçu */
+  border-radius:0;
   background:#eee;
 }
 

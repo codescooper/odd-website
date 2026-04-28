@@ -113,7 +113,9 @@ function selectOdd(oddNumber) {
   document.querySelector(`.odd-section[data-odd="${oddNumber}"]`).classList.add('active');
 
   // Mets à jour le centre
-  document.getElementById('wheelOddNumber').textContent = oddNumber;
+  const wheelOddNumber = document.getElementById('wheelOddNumber');
+  wheelOddNumber.textContent = oddNumber;
+  wheelOddNumber.style.color = oddInfo.color;
   document.getElementById('wheelOddTitle').textContent = oddInfo.name;
 
   // Mets à jour la description

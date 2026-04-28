@@ -60,9 +60,9 @@ img {
 }
 
 .hero-box {
-  max-width: 760px;
-  padding: 30px;
-  border-radius: 24px;
+  max-width: 560px;
+  padding: 20px 24px;
+  border-radius: 18px;
   background: rgba(255,255,255,.12);
   border: 1px solid rgba(255,255,255,.18);
   backdrop-filter: blur(12px);
@@ -70,10 +70,10 @@ img {
 }
 
 .hero-box h1 {
-  margin: 0 0 14px;
+  margin: 0 0 10px;
   color: #fff;
-  font-size: clamp(30px, 4.1vw, 58px);
-  line-height: 1.04;
+  font-size: clamp(22px, 3vw, 38px);
+  line-height: 1.15;
   font-family: "Playfair Display", serif;
 }
 
@@ -298,6 +298,14 @@ img {
   max-width: 100%;
   max-height: 70px;
   object-fit: contain;
+}
+
+.logo-text-box {
+  font-weight: 700;
+  font-size: 13px;
+  text-align: center;
+  color: #333;
+  line-height: 1.4;
 }
 
 /* CONTACT */

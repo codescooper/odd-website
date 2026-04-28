@@ -101,6 +101,10 @@
   background:#c62828;
 }
 
+.card-header.navy {
+  background:#ff4800;
+}
+
 .card-body {
   padding:20px;
 }

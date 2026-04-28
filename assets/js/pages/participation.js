@@ -91,10 +91,10 @@ function smoothScroll() {
       const target = document.querySelector(href);
       if (target) {
         e.preventDefault();
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
+        const headerEl = document.querySelector('header');
+        const headerOffset = headerEl ? headerEl.offsetHeight + 20 : 230;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
