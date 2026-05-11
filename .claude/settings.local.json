@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(git pull *)",
-      "WebFetch(domain:www.un.org)"
+      "WebFetch(domain:www.un.org)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }
