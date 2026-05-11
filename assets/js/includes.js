@@ -1,3 +1,27 @@
+// Animation favicon (Chrome/Edge/Safari n'animent pas les GIF favicons,
+// on cycle les 9 frames PNG via JS pour un rendu animé cross-browser).
+function startFaviconAnimation() {
+  const base = "assets/images/Favicon%20step/";
+  const frames = Array.from({ length: 9 }, (_, i) => `${base}${i + 1}.png`);
+
+  // Précharge pour éviter les clignotements
+  frames.forEach((src) => { const img = new Image(); img.src = src; });
+
+  let link = document.querySelector('link[rel="icon"]');
+  if (!link) {
+    link = document.createElement("link");
+    link.rel = "icon";
+    document.head.appendChild(link);
+  }
+  link.type = "image/png";
+
+  let i = 0;
+  setInterval(() => {
+    link.href = frames[i];
+    i = (i + 1) % frames.length;
+  }, 120);
+}
+
 async function loadPartial(selector, url) {
   const host = document.querySelector(selector);
   if (!host) return;
@@ -25,6 +49,8 @@ function setActiveNav() {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
+  startFaviconAnimation();
+
   await loadPartial("#site-header", "partials/header.html");
   await loadPartial("#site-footer", "partials/footer.html");
 
