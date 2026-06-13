@@ -1,8 +1,8 @@
 // ========== DONNÉES DES ODD ==========
 
 const oddData = [
-  { name: "Éradication de la pauvreté", description: "Éliminer la pauvreté sous toutes ses formes et partout dans le monde, en garantissant à tous un niveau de vie décent.", color: "#e5243b", icon: "🏠" },
-  { name: "Faim Zéro", description: "Éliminer la faim, assurer la sécurité alimentaire, améliorer la nutrition et promouvoir une agriculture durable.", color: "#dda63a", icon: "🌾" },
+  { name: "Pas de pauvreté", description: "Éliminer la pauvreté sous toutes ses formes et partout dans le monde, en garantissant à tous un niveau de vie décent.", color: "#e5243b", icon: "🏠" },
+  { name: "Faim « zéro »", description: "Éliminer la faim, assurer la sécurité alimentaire, améliorer la nutrition et promouvoir une agriculture durable.", color: "#dda63a", icon: "🌾" },
   { name: "Bonne santé et bien-être", description: "Garantir une vie saine et promouvoir le bien-être de tous à tout âge avec un accès universel aux soins de santé.", color: "#4c9f38", icon: "❤️" },
   { name: "Éducation de qualité", description: "Assurer une éducation inclusive, équitable et de qualité, et promouvoir des opportunités d'apprentissage pour tous.", color: "#c5192d", icon: "📚" },
   { name: "Égalité entre les sexes", description: "Parvenir à l'égalité des sexes et autonomiser toutes les femmes et les filles dans tous les domaines.", color: "#ff3a21", icon: "⚖️" },

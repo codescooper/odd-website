@@ -16,7 +16,7 @@ const oddTargetsData = [
   },
   {
     id: 2,
-    title: "Faim zéro",
+    title: "Faim « zéro »",
     color: "#DDA63A",
     summary: "Éliminer la faim, assurer la sécurité alimentaire, améliorer la nutrition et promouvoir une agriculture durable.",
     targets: [
@@ -37,13 +37,13 @@ const oddTargetsData = [
     summary: "Permettre à tous de vivre en bonne santé et promouvoir le bien-être de tous à tout âge.",
     targets: [
       { code: "3.1", text: "D’ici à 2030, faire passer le taux mondial de mortalité maternelle au-dessous de 70 pour 100 000 naissances vivantes." },
-      { code: "3.2", text: "D’ici à 2030, mettre fin aux décès évitables de nouveau-nés et d’enfants de moins de 5 ans, tous les pays devant chercher à ramener la mortalité néonatale à 12 pour 1 000 naissances vivantes au plus." },
+      { code: "3.2", text: "D’ici à 2030, mettre fin aux décès évitables de nouveau-nés et d’enfants de moins de 5 ans, tous les pays devant chercher à ramener la mortalité néonatale à 12 pour 1 000 naissances vivantes au plus et la mortalité des enfants de moins de 5 ans à 25 pour 1 000 naissances vivantes au plus." },
       { code: "3.3", text: "D’ici à 2030, mettre fin à l’épidémie de sida, à la tuberculose, au paludisme et aux maladies tropicales négligées et combattre l’hépatite, les maladies transmises par l’eau et autres maladies transmissibles." },
       { code: "3.4", text: "D’ici à 2030, réduire d’un tiers, par la prévention et le traitement, le taux de mortalité prématurée due à des maladies non transmissibles et promouvoir la santé mentale et le bien-être." },
       { code: "3.5", text: "Renforcer la prévention et le traitement de l’abus de substances psychoactives, notamment de stupéfiants et d’alcool." },
       { code: "3.6", text: "D’ici à 2020, réduire de moitié à l’échelle mondiale le nombre de décès et de blessures dus à des accidents de la route." },
       { code: "3.7", text: "D’ici à 2030, assurer l’accès de tous à des services de soins de santé sexuelle et procréative, y compris à des fins de planification familiale, d’information et d’éducation." },
-      { code: "3.8", text: "Faire en sorte que chacun bénéficie d’une couverture sanitaire universelle, comprenant une protection contre les risques financiers et l’accès à des services de santé essentiels de qualité." },
+      { code: "3.8", text: "Faire en sorte que chacun bénéficie d’une couverture sanitaire universelle, comprenant une protection contre les risques financiers et donnant accès à des services de santé essentiels de qualité et à des médicaments et vaccins essentiels sûrs, efficaces, de qualité et d’un coût abordable." },
       { code: "3.9", text: "D’ici à 2030, réduire nettement le nombre de décès et de maladies dus à des substances chimiques dangereuses et à la pollution et à la contamination de l’air, de l’eau et du sol." },
       { code: "3.a", text: "Renforcer dans tous les pays, selon qu’il convient, la mise en œuvre de la Convention-cadre de l’Organisation mondiale de la Santé pour la lutte antitabac." },
       { code: "3.b", text: "Soutenir la recherche et la mise au point de vaccins et de médicaments contre les maladies, transmissibles ou non, qui touchent principalement les habitants des pays en développement." },
@@ -57,7 +57,7 @@ const oddTargetsData = [
     color: "#C5192D",
     summary: "Assurer l’accès de tous à une éducation de qualité, sur un pied d’égalité, et promouvoir les possibilités d’apprentissage tout au long de la vie.",
     targets: [
-      { code: "4.1", text: "D’ici à 2030, faire en sorte que toutes les filles et tous les garçons suivent un cycle complet d’enseignement primaire et secondaire gratuit, équitable et de qualité, qui débouche sur un apprentissage véritablement utile." },
+      { code: "4.1", text: "D’ici à 2030, faire en sorte que toutes les filles et tous les garçons suivent, sur un pied d’égalité, un cycle complet d’enseignement primaire et secondaire gratuit et de qualité, qui débouche sur un apprentissage véritablement utile." },
       { code: "4.2", text: "D’ici à 2030, faire en sorte que toutes les filles et tous les garçons aient accès à des activités de développement et de soins de la petite enfance et à une éducation préscolaire de qualité." },
       { code: "4.3", text: "D’ici à 2030, faire en sorte que les femmes et les hommes aient tous accès dans des conditions d’égalité à un enseignement technique, professionnel ou tertiaire de qualité, y compris universitaire." },
       { code: "4.4", text: "D’ici à 2030, augmenter considérablement le nombre de jeunes et d’adultes disposant des compétences, notamment techniques et professionnelles, nécessaires à l’emploi, à l’obtention d’un travail décent et à l’entrepreneuriat." },
@@ -65,7 +65,7 @@ const oddTargetsData = [
       { code: "4.6", text: "D’ici à 2030, faire en sorte que tous les jeunes et une proportion considérable d’adultes, hommes et femmes, sachent lire, écrire et compter." },
       { code: "4.7", text: "D’ici à 2030, faire en sorte que tous les élèves acquièrent les connaissances et compétences nécessaires pour promouvoir le développement durable, notamment par l’éducation en faveur du développement et de modes de vie durables." },
       { code: "4.a", text: "Faire construire des établissements scolaires qui soient adaptés aux enfants, aux personnes handicapées et aux deux sexes, ou rénover les établissements existants à cette fin et qui offrent un cadre d’apprentissage sûr, non violent, inclusif et efficace pour tous." },
-      { code: "4.b", text: "D’ici à 2020, augmenter le nombre de bourses d’études accordées à des étudiants des pays en développement, en particulier des pays les moins avancés, des petits États insulaires en développement et des pays d’Afrique." },
+      { code: "4.b", text: "D’ici à 2020, augmenter considérablement à l’échelle mondiale le nombre de bourses d’études offertes à des étudiants des pays en développement, en particulier des pays les moins avancés, des petits États insulaires en développement et des pays africains, pour leur permettre de suivre des études supérieures, y compris une formation professionnelle, des cursus informatiques, techniques, scientifiques et d’ingénieur, dans des pays développés et d’autres pays en développement." },
       { code: "4.c", text: "D’ici à 2030, accroître nettement le nombre d’enseignants qualifiés, notamment grâce à la coopération internationale pour la formation d’enseignants dans les pays en développement." }
     ]
   },
@@ -356,10 +356,23 @@ window.initOddTargetsPage = function initOddTargetsPage() {
       card.className = "oddtarget-card";
       card.style.setProperty("--target-color", odd.color);
 
+      const isLong = target.text.length > 180;
+
       card.innerHTML = `
         <span class="oddtarget-code">${target.code}</span>
-        <p class="oddtarget-text">${target.text}</p>
+        <p class="oddtarget-text${isLong ? " is-clamped" : ""}">${target.text}</p>
+        ${isLong ? '<button class="oddtarget-toggle" type="button" aria-expanded="false">Voir plus</button>' : ""}
       `;
+
+      if (isLong) {
+        const textEl = card.querySelector(".oddtarget-text");
+        const toggle = card.querySelector(".oddtarget-toggle");
+        toggle.addEventListener("click", () => {
+          const clamped = textEl.classList.toggle("is-clamped");
+          toggle.textContent = clamped ? "Voir plus" : "Voir moins";
+          toggle.setAttribute("aria-expanded", String(!clamped));
+        });
+      }
 
       oddTargetsList.appendChild(card);
     });

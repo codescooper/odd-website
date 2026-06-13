@@ -280,6 +280,27 @@
   color:#333;
 }
 
+/* Cible longue : repli "Voir plus / Voir moins" */
+.oddtarget-text.is-clamped{
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+.oddtarget-toggle{
+  margin-top:8px;
+  padding:0;
+  border:0;
+  background:none;
+  cursor:pointer;
+  font:inherit;
+  font-weight:800;
+  font-size:14px;
+  color:var(--target-color, #3F9C35);
+}
+.oddtarget-toggle:hover{ text-decoration:underline; }
+
 /* RESPONSIVE */
 @media (max-width: 1200px){
   :root{

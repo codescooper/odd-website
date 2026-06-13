@@ -53,8 +53,8 @@
         </div>
 
         <div class="hero-socials">
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@ONG-EDUCATION-ODD" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://www.facebook.com/p/ONG-Education-ODD-100083027846106/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
     </div>
@@ -207,14 +207,21 @@
       <p>Pour en savoir plus sur nos initiatives et projets.</p>
 
       <form>
+        <!-- Web3Forms — clé d'accès (les messages arrivent sur codescooper@gmail.com) -->
+        <input type="hidden" name="access_key" value="a90299cb-3cd7-4cc5-a78c-f4a7cd39abc0">
+        <input type="hidden" name="subject" value="Nouveau message — formulaire d'accueil education-odd.com">
+        <input type="hidden" name="from_name" value="Site ONG EDUCATION ODD">
+        <!-- Anti-spam (honeypot) : laissé vide par un humain -->
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
         <label>Vos nom et prénom ici</label>
-        <input placeholder="Entrez vos nom et prénom" />
+        <input type="text" name="name" placeholder="Entrez vos nom et prénom" required />
 
         <label>Votre adresse e-mail*</label>
-        <input placeholder="Entrez votre e-mail" />
+        <input type="email" name="email" placeholder="Entrez votre e-mail" required />
 
         <label>Votre message ici*</label>
-        <textarea placeholder="Écrivez votre message"></textarea>
+        <textarea name="message" placeholder="Écrivez votre message" required></textarea>
 
         <div style="margin-top:16px;text-align:center">
           <button class="btn btn-don" type="submit">Soumettre votre message</button>
@@ -227,9 +234,26 @@
   <div id="site-footer"></div>
 
   <script>
-    document.querySelector('.contact form').addEventListener('submit', function(e) {
+    document.querySelector('.contact form').addEventListener('submit', async function(e) {
       e.preventDefault();
-      alert('Merci pour votre message. Nous vous contacterons bientôt.');
+      const form = e.currentTarget;
+      const btn = form.querySelector('button[type="submit"]');
+      const data = new FormData(form);
+      if (btn) { btn.disabled = true; }
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const json = await res.json();
+        if (json.success) {
+          alert('Merci pour votre message. Nous vous contacterons bientôt.');
+          form.reset();
+        } else {
+          alert("L'envoi a échoué. Réessayez ou écrivez-nous à info@education-odd.com.");
+        }
+      } catch (err) {
+        alert("Connexion impossible. Réessayez plus tard ou écrivez à info@education-odd.com.");
+      } finally {
+        if (btn) { btn.disabled = false; }
+      }
     });
   </script>
 

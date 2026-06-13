@@ -33,14 +33,21 @@
         <p class="contact-subtitle">Pour en savoir plus sur nos initiatives et projets.</p>
 
         <form class="contact-form">
+          <!-- Web3Forms — clé d'accès (les messages arrivent sur codescooper@gmail.com) -->
+          <input type="hidden" name="access_key" value="a90299cb-3cd7-4cc5-a78c-f4a7cd39abc0">
+          <input type="hidden" name="subject" value="Nouveau message — page Contact education-odd.com">
+          <input type="hidden" name="from_name" value="Site ONG EDUCATION ODD">
+          <!-- Anti-spam (honeypot) : laissé vide par un humain -->
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
           <label>Vos nom et prénom ici</label>
-          <input type="text" placeholder="Entrez vos nom et prénom" required>
+          <input type="text" name="name" placeholder="Entrez vos nom et prénom" required>
 
           <label>Votre adresse e-mail*</label>
-          <input type="email" placeholder="Entrez votre e-mail" required>
+          <input type="email" name="email" placeholder="Entrez votre e-mail" required>
 
           <label>Votre message ici*</label>
-          <textarea placeholder="Écrivez votre message" required></textarea>
+          <textarea name="message" placeholder="Écrivez votre message" required></textarea>
 
           <div style="margin-top:16px;text-align:center">
             <button class="btn btn-don" type="submit">Soumettre votre message</button>
@@ -80,10 +87,13 @@
         <h2>Suivez nous</h2>
 
         <div class="follow-icons" aria-label="Réseaux sociaux">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.facebook.com/p/ONG-Education-ODD-100083027846106/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/@ONG-EDUCATION-ODD" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <!-- Comptes non confirmés — réactiver dès qu'ils existent (mettre la vraie URL dans href) :
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          -->
         </div>
       </div>
     </section>
@@ -116,9 +126,26 @@
   <script src="assets/js/includes.js"></script>
 
   <script>
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+    document.querySelector('.contact-form').addEventListener('submit', async function(e) {
       e.preventDefault();
-      alert('Merci pour votre message. Nous vous contacterons bientôt.');
+      const form = e.currentTarget;
+      const btn = form.querySelector('button[type="submit"]');
+      const data = new FormData(form);
+      if (btn) { btn.disabled = true; }
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const json = await res.json();
+        if (json.success) {
+          alert('Merci pour votre message. Nous vous contacterons bientôt.');
+          form.reset();
+        } else {
+          alert("L'envoi a échoué. Réessayez ou écrivez-nous à info@education-odd.com.");
+        }
+      } catch (err) {
+        alert("Connexion impossible. Réessayez plus tard ou écrivez à info@education-odd.com.");
+      } finally {
+        if (btn) { btn.disabled = false; }
+      }
     });
   </script>
 </body>
