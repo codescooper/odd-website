@@ -7,7 +7,22 @@
   <!-- Favicon animé -->
   <link rel="icon" type="image/gif" href="assets/images/Favicon%20step/ong%20education%20odd%20favicon.gif">
   <link rel="shortcut icon" type="image/gif" href="assets/images/Favicon%20step/ong%20education%20odd%20favicon.gif">
-  <title>Partenaires — ONG EDUCATION ODD</title>
+  <title>Devenir partenaire — ONG EDUCATION ODD</title>
+
+  <!-- SEO + partage -->
+  <meta name="description" content="Devenez partenaire de l'ONG EDUCATION ODD : soutien financier, logistique, pédagogique ou communication pour les ODD en Côte d'Ivoire.">
+  <link rel="canonical" href="https://education-odd.com/devenir-partenaire.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONG EDUCATION ODD">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Devenir partenaire — ONG EDUCATION ODD">
+  <meta property="og:description" content="Soutien financier, logistique, pédagogique ou communication : rejoignez nos partenaires engagés.">
+  <meta property="og:url" content="https://education-odd.com/devenir-partenaire.html">
+  <meta property="og:image" content="https://education-odd.com/assets/images/impact.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Devenir partenaire — ONG EDUCATION ODD">
+  <meta name="twitter:description" content="Rejoignez les partenaires engagés de l'ONG EDUCATION ODD.">
+  <meta name="twitter:image" content="https://education-odd.com/assets/images/impact.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,44 +67,50 @@
 
       <form class="partner-form">
 
+        <!-- Web3Forms — envoi vers codescooper@gmail.com -->
+        <input type="hidden" name="access_key" value="a90299cb-3cd7-4cc5-a78c-f4a7cd39abc0">
+        <input type="hidden" name="subject" value="Nouvelle demande de partenariat — education-odd.com">
+        <input type="hidden" name="from_name" value="Site ONG EDUCATION ODD">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
         <label>
           Nom de l’organisation*
-          <input type="text" required>
+          <input type="text" name="Organisation" required>
         </label>
 
         <label>
           Nom et prénom du référent*
-          <input type="text" required>
+          <input type="text" name="Référent" required>
         </label>
 
         <label>
           Fonction dans l’organisation
-          <input type="text">
+          <input type="text" name="Fonction">
         </label>
 
         <label>
           Adresse email professionnelle*
-          <input type="email" required>
+          <input type="email" name="email" required>
         </label>
 
         <label>
           Numéro de téléphone / WhatsApp*
-          <input type="tel" required>
+          <input type="tel" name="Téléphone" required>
         </label>
 
         <fieldset class="partner-types">
           <legend>Type de partenariat envisagé</legend>
 
-          <label><input type="checkbox"> Soutien financier</label>
-          <label><input type="checkbox"> Partenariat logistique (matériel, transport…)</label>
-          <label><input type="checkbox"> Appui pédagogique ou éducatif</label>
-          <label><input type="checkbox"> Communication et sensibilisation</label>
-          <label><input type="checkbox"> Autre (à préciser)</label>
+          <label><input type="checkbox" name="Type de partenariat" value="Soutien financier"> Soutien financier</label>
+          <label><input type="checkbox" name="Type de partenariat" value="Partenariat logistique"> Partenariat logistique (matériel, transport…)</label>
+          <label><input type="checkbox" name="Type de partenariat" value="Appui pédagogique ou éducatif"> Appui pédagogique ou éducatif</label>
+          <label><input type="checkbox" name="Type de partenariat" value="Communication et sensibilisation"> Communication et sensibilisation</label>
+          <label><input type="checkbox" name="Type de partenariat" value="Autre"> Autre (à préciser)</label>
         </fieldset>
 
         <label>
           Message*
-          <textarea rows="5" required></textarea>
+          <textarea rows="5" name="message" required></textarea>
         </label>
 
         <button type="submit" class="btn-primary">
@@ -105,3 +126,24 @@
 
 <!-- Footer injecté -->
 <div id="site-footer"></div>
+
+<script>
+  document.querySelector('.partner-form')?.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const btn = form.querySelector('button[type="submit"]');
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) });
+      const json = await res.json();
+      if (json.success) { alert('Merci ! Votre demande de partenariat a bien été envoyée.'); form.reset(); }
+      else { alert("L'envoi a échoué. Réessayez ou écrivez-nous à info@education-odd.com."); }
+    } catch (err) {
+      alert('Connexion impossible. Réessayez plus tard ou écrivez à info@education-odd.com.');
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

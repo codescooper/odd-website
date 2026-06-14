@@ -1,7 +1,59 @@
 :root{
-  --green:#3F9C35;
-  --orange:#FF8200;
-  --blue:#176BE0;
-  --dark:#261F1F;
-  --container:1200px;
+  /* ===== Couleurs de marque ===== */
+  --green:#3F9C35;          /* conservé (compatibilité) */
+  --green-dark:#2F7A28;
+  --green-light:#E8F3E6;
+  --orange:#FF8200;         /* conservé */
+  --orange-dark:#E06F00;
+  --blue:#176BE0;           /* conservé */
+  --red:#C0392B;
+  --dark:#261F1F;           /* conservé */
+
+  /* ===== Neutres ===== */
+  --bg:#FFFFFF;
+  --bg-soft:#F6F7F9;
+  --text:#222222;
+  --text-soft:#555555;
+  --muted:#777777;
+  --border:#ECECEC;
+
+  /* ===== Rôles sémantiques ===== */
+  --color-primary:var(--green);
+  --color-accent:var(--orange);
+  --color-link:var(--green);
+  --color-danger:var(--red);
+
+  /* ===== Typographie ===== */
+  --font-sans:'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display:'Playfair Display', Georgia, serif;
+  --fs-300:13px;
+  --fs-400:15px;
+  --fs-500:18px;
+  --fs-600:22px;
+  --fs-700:28px;
+  --fs-800:36px;
+  --fs-900:44px;
+
+  /* ===== Espacements ===== */
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:24px;
+  --space-6:32px;
+  --space-7:48px;
+  --space-8:64px;
+
+  /* ===== Rayons & ombres ===== */
+  --radius-sm:8px;
+  --radius:14px;
+  --radius-lg:18px;
+  --radius-pill:999px;
+  --shadow-sm:0 6px 20px rgba(0,0,0,.05);
+  --shadow:0 12px 30px rgba(0,0,0,.08);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.18);
+
+  /* ===== Layout ===== */
+  --container:1200px;       /* conservé */
+  --header-height:0px;
 }

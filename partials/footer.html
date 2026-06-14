@@ -2,20 +2,24 @@
   <div class="container">
     <div class="footerGrid">
       <div>
-        <a href="#">ACCUEIL</a>
-        <a href="#">PRESENTATION</a>
-        <a href="#">ACTIVITES</a>
+        <a href="index.html">ACCUEIL</a>
+        <a href="presentation.html">PRESENTATION</a>
+        <a href="activites.html">ACTIVITES</a>
       </div>
       <div>
-        <a href="#">NOS PROJETS</a>
-        <a href="#">PRESSE</a>
-        <a href="#">FAIRE UN DON</a>
+        <a href="nos-projets.html">NOS PROJETS</a>
+        <a href="presse.html">PRESSE</a>
+        <a href="faire-un-don.html">FAIRE UN DON</a>
       </div>
       <div>
-        <div class="newsletter">
-          <input placeholder="Entrez votre e-mail validé" />
-          <button class="send" type="button">Soumettre votre demande maintenant</button>
-        </div>
+        <form class="newsletter" id="newsletterForm">
+          <input type="hidden" name="access_key" value="a90299cb-3cd7-4cc5-a78c-f4a7cd39abc0">
+          <input type="hidden" name="subject" value="Nouvelle inscription newsletter — education-odd.com">
+          <input type="hidden" name="from_name" value="Newsletter ONG EDUCATION ODD">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <input type="email" name="email" placeholder="Entrez votre e-mail" required />
+          <button class="send" type="submit">Soumettre votre demande maintenant</button>
+        </form>
       </div>
     </div>
     <div class="copy">

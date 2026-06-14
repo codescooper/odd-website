@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://education-odd.com/sitemap.xml

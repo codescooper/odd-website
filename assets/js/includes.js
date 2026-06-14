@@ -48,6 +48,27 @@ function setActiveNav() {
   });
 }
 
+// Newsletter du footer -> Web3Forms (envoi e-mail)
+function initNewsletter() {
+  const form = document.getElementById("newsletterForm");
+  if (!form) return;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector("button");
+    if (btn) btn.disabled = true;
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: new FormData(form) });
+      const json = await res.json();
+      alert(json.success ? "Merci, votre inscription est bien enregistrée !" : "L'envoi a échoué. Réessayez plus tard.");
+      if (json.success) form.reset();
+    } catch (err) {
+      alert("Connexion impossible. Réessayez plus tard.");
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  });
+}
+
 window.addEventListener("DOMContentLoaded", async () => {
   startFaviconAnimation();
 
@@ -56,6 +77,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
   // active link + init burger/dropdowns
   setActiveNav();
+  initNewsletter();
 
   // IMPORTANT : après injection, on initialise ton JS de menu
   if (window.initHeaderMenu) window.initHeaderMenu();
