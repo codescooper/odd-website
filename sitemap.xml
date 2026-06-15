@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://education-odd.com/</loc><priority>1.0</priority></url>
   <url><loc>https://education-odd.com/presentation.html</loc><priority>0.8</priority></url>
+  <url><loc>https://education-odd.com/gouvernance.html</loc><priority>0.6</priority></url>
+  <url><loc>https://education-odd.com/transparence.html</loc><priority>0.6</priority></url>
   <url><loc>https://education-odd.com/activites.html</loc><priority>0.8</priority></url>
   <url><loc>https://education-odd.com/nos-projets.html</loc><priority>0.8</priority></url>
   <url><loc>https://education-odd.com/dans-lodd-3-sante-et-bien-etre.html</loc><priority>0.7</priority></url>

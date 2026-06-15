@@ -297,7 +297,7 @@ function handleAnswer(selectedIndex) {
     options[selectedIndex].classList.add('correct');
     correctCount++;
     score += 10;
-    feedback.textContent = '🎉 Excellent ! Bonne réponse ! (+10 points)';
+    feedback.textContent = 'Excellent ! Bonne réponse. (+10 points)';
     feedback.style.background = 'rgba(76, 175, 80, 0.3)';
   } else {
     // Mauvaise réponse
@@ -305,7 +305,7 @@ function handleAnswer(selectedIndex) {
     options[question.correct].classList.add('correct');
     wrongCount++;
     score = Math.max(0, score - 5);
-    feedback.textContent = '❌ Dommage ! La bonne réponse était : ' + question.options[question.correct] + ' (-5 points)';
+    feedback.textContent = 'Dommage. La bonne réponse était : ' + question.options[question.correct] + ' (-5 points)';
     feedback.style.background = 'rgba(244, 67, 54, 0.3)';
   }
 
@@ -342,7 +342,7 @@ function shareOnFacebook() {
 
   // Copier le texte dans le presse-papier
   navigator.clipboard.writeText(text).then(() => {
-    alert('✅ Texte copié ! Vous pouvez le coller dans votre publication Facebook.');
+    alert('Texte copié ! Vous pouvez le coller dans votre publication Facebook.');
   }).catch(() => {
     prompt('Copiez ce texte pour votre publication :', text);
   });

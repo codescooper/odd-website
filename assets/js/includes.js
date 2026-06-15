@@ -70,8 +70,6 @@ function initNewsletter() {
 }
 
 window.addEventListener("DOMContentLoaded", async () => {
-  startFaviconAnimation();
-
   await loadPartial("#site-header", "partials/header.html");
   await loadPartial("#site-footer", "partials/footer.html");
 

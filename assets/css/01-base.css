@@ -162,3 +162,13 @@ select:focus-visible,
   outline:3px solid var(--orange, #FF8200);
   outline-offset:2px;
 }
+
+/* Respect de la préférence système "réduire les animations" */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}

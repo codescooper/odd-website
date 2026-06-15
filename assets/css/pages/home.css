@@ -223,7 +223,7 @@ img {
 
 /* PROJECTS */
 .band {
-  background: linear-gradient(180deg, #ff8500 0%, #f57c00 100%);
+  background: var(--sdg-navy);
   color: #fff;
 }
 
