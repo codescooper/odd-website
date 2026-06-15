@@ -88,14 +88,14 @@
 }
 
 .btn-don {
-  background: #FF8200;
+  background: var(--sdg-navy);
   color: #fff;
-  box-shadow: 0 10px 24px rgba(255,130,0,.28);
+  box-shadow: 0 10px 24px rgba(25,72,106,.28);
 }
 
 .btn-don:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(255,130,0,.4);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(25,72,106,.4);
 }
 
 /* Infos de contact */

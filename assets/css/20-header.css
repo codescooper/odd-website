@@ -1,5 +1,5 @@
-header{ 
-  background:var(--green);
+header{
+  background:var(--sdg-navy);
   color:#fff;
   position: fixed;
   width:100%;
@@ -45,11 +45,10 @@ header{
 .actions a { font-size: 35px; }
 
 .don{
-  background:var(--orange);
+  background:var(--green);
   color:#fff;
-  border-radius:999px;
+  border-radius:8px;
   padding:12px 22px;
-  font-weight:800;
+  font-weight:600;
   font-size: 15px !important;
-  height: 80px;
 }
