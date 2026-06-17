@@ -4,7 +4,7 @@
   margin:0;
   padding:0;
   display:flex;
-  gap:22px;
+  gap:18px;
   align-items:center;
   flex-wrap:wrap;
   justify-content:center;
@@ -13,14 +13,14 @@
 .block-header-item{ position:relative; }
 
 .item-content{
-  font: 600 14px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  letter-spacing:.5px;
+  font: 600 13px/1.2 var(--font-sans, system-ui), system-ui, Segoe UI, Roboto, Arial;
+  letter-spacing:.3px;
   text-transform:uppercase;
   color:#fff;
   background:none;
   border:0;
   cursor:pointer;
-  padding:10px 0;
+  padding:8px 0;
 }
 
 /* Hover desktop */
