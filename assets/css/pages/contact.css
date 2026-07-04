@@ -8,6 +8,10 @@
   height: 180px;
 }
 
+@media (max-width:768px){
+  .spacer{ height: 80px; }
+}
+
 .contact::before {
   content: "";
   position: absolute;
@@ -88,14 +92,38 @@
 }
 
 .btn-don {
-  background: #FF8200;
+  background: var(--sdg-navy);
   color: #fff;
-  box-shadow: 0 10px 24px rgba(255,130,0,.28);
+  box-shadow: 0 10px 24px rgba(25,72,106,.28);
 }
 
 .btn-don:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(255,130,0,.4);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(25,72,106,.4);
+}
+
+.contact-quick-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 26px;
+}
+
+.contact-quick-actions .btn {
+  text-decoration: none;
+}
+
+.btn-whatsapp {
+  background: #0E7A3F;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(14,122,63,.3);
+}
+
+.btn-whatsapp:hover {
+  background: #0B6332;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(14,122,63,.42);
 }
 
 /* Infos de contact */

@@ -86,6 +86,7 @@
   padding:11px 24px;
   border-radius:8px;
   font-weight:800;
+  font-family:inherit;
   background:#fff;
   text-decoration:none;
   cursor:pointer;

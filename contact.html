@@ -9,6 +9,21 @@
   <link rel="shortcut icon" type="image/gif" href="assets/images/Favicon%20step/ong%20education%20odd%20favicon.gif">
   <title>Contact – ONG EDUCATION ODD</title>
 
+  <!-- SEO + partage -->
+  <meta name="description" content="Contactez l'ONG EDUCATION ODD à Abidjan, Côte d'Ivoire. Questions sur nos initiatives et projets pour les ODD : info@education-odd.com.">
+  <link rel="canonical" href="https://education-odd.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONG EDUCATION ODD">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Contact — ONG EDUCATION ODD">
+  <meta property="og:description" content="Contactez l'ONG EDUCATION ODD à Abidjan, Côte d'Ivoire.">
+  <meta property="og:url" content="https://education-odd.com/contact.html">
+  <meta property="og:image" content="https://education-odd.com/assets/images/impact.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — ONG EDUCATION ODD">
+  <meta name="twitter:description" content="Contactez l'ONG EDUCATION ODD à Abidjan, Côte d'Ivoire.">
+  <meta name="twitter:image" content="https://education-odd.com/assets/images/impact.jpg">
+
     <!-- CSS global -->
   <link rel="stylesheet" href="assets/css/00-variables.css">
   <link rel="stylesheet" href="assets/css/01-base.css">
@@ -19,6 +34,9 @@
 
   
   <link rel="stylesheet" href="assets/css/pages/contact.css">
+
+  <script src="assets/js/header.js" defer></script>
+  <script src="assets/js/includes.js" defer></script>
 </head>
 
 <body>
@@ -32,22 +50,31 @@
         <h1>Contactez-nous</h1>
         <p class="contact-subtitle">Pour en savoir plus sur nos initiatives et projets.</p>
 
+        <div class="contact-quick-actions">
+          <a class="btn btn-don" href="tel:+2250789084487">
+            <i class="fas fa-phone"></i>&nbsp; Appeler
+          </a>
+          <a class="btn btn-whatsapp" target="_blank" rel="noopener"
+             href="https://wa.me/2250789084487?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20le%20site%20education-odd.com.">
+            <i class="fa-brands fa-whatsapp"></i>&nbsp; WhatsApp
+          </a>
+        </div>
+
         <form class="contact-form">
-          <!-- Web3Forms — clé d'accès (les messages arrivent sur codescooper@gmail.com) -->
           <input type="hidden" name="access_key" value="a90299cb-3cd7-4cc5-a78c-f4a7cd39abc0">
           <input type="hidden" name="subject" value="Nouveau message — page Contact education-odd.com">
           <input type="hidden" name="from_name" value="Site ONG EDUCATION ODD">
           <!-- Anti-spam (honeypot) : laissé vide par un humain -->
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
-          <label>Vos nom et prénom ici</label>
-          <input type="text" name="name" placeholder="Entrez vos nom et prénom" required>
+          <label for="contact-name">Vos nom et prénom*</label>
+          <input type="text" id="contact-name" name="name" placeholder="Entrez vos nom et prénom" required>
 
-          <label>Votre adresse e-mail*</label>
-          <input type="email" name="email" placeholder="Entrez votre e-mail" required>
+          <label for="contact-email">Votre adresse e-mail*</label>
+          <input type="email" id="contact-email" name="email" placeholder="Entrez votre e-mail" required>
 
-          <label>Votre message ici*</label>
-          <textarea name="message" placeholder="Écrivez votre message" required></textarea>
+          <label for="contact-message">Votre message*</label>
+          <textarea id="contact-message" name="message" placeholder="Écrivez votre message" required></textarea>
 
           <div style="margin-top:16px;text-align:center">
             <button class="btn btn-don" type="submit">Soumettre votre message</button>
@@ -61,6 +88,9 @@
             <div>
               <strong>Téléphone</strong><br>
               <a href="tel:+2250789084487">+225 07 89 08 44 87</a>
+              &nbsp;·&nbsp;
+              <a target="_blank" rel="noopener"
+                 href="https://wa.me/2250789084487?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20le%20site%20education-odd.com.">WhatsApp</a>
             </div>
           </div>
           <div class="info-item">
@@ -84,7 +114,7 @@
     <!-- Suivez-nous -->
     <section class="follow">
       <div class="container">
-        <h2>Suivez nous</h2>
+        <h2>Suivez-nous</h2>
 
         <div class="follow-icons" aria-label="Réseaux sociaux">
           <a href="https://www.facebook.com/p/ONG-Education-ODD-100083027846106/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -102,12 +132,8 @@
     <section class="map-wrap">
       <div class="container">
         <div class="map-box">
-          <!-- Option 1: image temporaire -->
-          <!-- <img src="assets/images/map-placeholder.png" alt="Carte"> -->
-
-          <!-- Option 2: Google Maps embed -->
           <iframe
-            title="Carte"
+            title="Carte de localisation — Abidjan, Côte d'Ivoire"
             src="https://www.google.com/maps?q=Abidjan&output=embed"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
@@ -122,8 +148,6 @@
 
   <!-- Font Awesome (si pas déjà dans header.html) -->
   <script src="https://kit.fontawesome.com/d82e28740c.js" crossorigin="anonymous"></script>
-
-  <script src="assets/js/includes.js"></script>
 
   <script>
     document.querySelector('.contact-form').addEventListener('submit', async function(e) {

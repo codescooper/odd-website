@@ -564,6 +564,17 @@
   color: white;
 }
 
+/* Neutralise le style natif des <button> de quiz (même rendu que les anciens div) */
+button.quiz-option {
+  font: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 100%;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 .quiz-option:hover:not(.correct):not(.incorrect) {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-3px);

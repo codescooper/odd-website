@@ -2,9 +2,15 @@
 
 body{
   margin:0;
-  font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  color:#111;
+  font-family: var(--font-sans);
+  color:#1A1A1A;
   padding-top: var(--header-height, 0px);
+}
+
+h1, h2, h3, h4{
+  font-family: var(--font-display);
+  font-weight:600;
+  letter-spacing:.005em;
 }
 
 a{ color:inherit; text-decoration:none; }
@@ -17,22 +23,33 @@ a{ color:inherit; text-decoration:none; }
 
 .muted{ color:#444; }
 
+/* Masquage visuel accessible (lecteurs d'écran) */
+.sr-only{
+  position:absolute;
+  width:1px; height:1px;
+  padding:0; margin:-1px;
+  overflow:hidden;
+  clip:rect(0 0 0 0);
+  white-space:nowrap;
+  border:0;
+}
+
 .btn{
   display:inline-block;
-  background:var(--orange);
+  background:var(--sdg-navy);
   color:#fff;
   border-radius:8px;
   padding:12px 28px;
-  font-weight:800;
-  transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  font-weight:600;
+  transition: transform .2s ease, box-shadow .2s ease;
   text-decoration:none;
   border:none;
   cursor:pointer;
 }
 
 .btn:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(255,130,0,.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(25,72,106,.35);
 }
 
 .btn:active{
@@ -138,5 +155,31 @@ a{ color:inherit; text-decoration:none; }
 
   .about-box img{
     height:200px;
+  }
+}
+
+/* ===== Accessibilité : focus clavier visible ===== */
+:focus-visible{
+  outline:3px solid var(--sdg-navy, #19486A);
+  outline-offset:2px;
+  border-radius:4px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible{
+  outline:3px solid var(--sdg-navy, #19486A);
+  outline-offset:2px;
+}
+
+/* Respect de la préférence système "réduire les animations" */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
   }
 }

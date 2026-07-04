@@ -10,9 +10,24 @@
 
   <title>Participation — ONG EDUCATION ODD</title>
 
+  <!-- SEO + partage -->
+  <meta name="description" content="Votre participation au développement durable : comprenez et agissez pour les 17 ODD avec l'ONG EDUCATION ODD.">
+  <link rel="canonical" href="https://education-odd.com/participation.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONG EDUCATION ODD">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Participation — ONG EDUCATION ODD">
+  <meta property="og:description" content="Comprenez et agissez pour les 17 ODD avec l'ONG EDUCATION ODD.">
+  <meta property="og:url" content="https://education-odd.com/participation.html">
+  <meta property="og:image" content="https://education-odd.com/assets/images/impact.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Participation — ONG EDUCATION ODD">
+  <meta name="twitter:description" content="Agissez pour les 17 ODD avec l'ONG EDUCATION ODD.">
+  <meta name="twitter:image" content="https://education-odd.com/assets/images/impact.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <!-- Polices (Oswald + Roboto) chargées via assets/css/00-variables.css -->
 
   <!-- CSS global -->
   <link rel="stylesheet" href="assets/css/00-variables.css">
@@ -49,7 +64,24 @@
 
       <div class="participation-hero-actions">
         <a class="btn-primary" href="#sommaire-odd">Voir les 17 ODD</a>
-        <a class="btn-outline" href="contact.html">Nous contacter</a>
+
+        <div class="quick-cta" data-quick-cta>
+          <button type="button" class="btn-outline quick-cta__trigger" aria-haspopup="true" aria-expanded="false">
+            Nous contacter <span class="quick-cta__caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="quick-cta__menu" role="menu">
+            <a class="quick-cta__option" role="menuitem" href="tel:+2250789084487">
+              <i class="fas fa-phone"></i> Appeler
+            </a>
+            <a class="quick-cta__option" role="menuitem" target="_blank" rel="noopener"
+               href="https://wa.me/2250789084487?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20le%20site%20education-odd.com.">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a class="quick-cta__option quick-cta__option--ghost" role="menuitem" href="contact.html">
+              Formulaire de contact
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -392,7 +424,7 @@
       <!-- ODD 12 -->
       <article class="odd-card odd-card--12" id="odd-12">
         <div class="odd-card__head">
-          <h3>Objectif 12 : Consommation et production responsables</h3>
+          <h3>Objectif 12 : Consommation et production durables</h3>
           <button class="odd-toggle" type="button" aria-expanded="true">Réduire</button>
         </div>
         <div class="odd-card__body">

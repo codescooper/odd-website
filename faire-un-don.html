@@ -9,9 +9,24 @@
   <link rel="shortcut icon" type="image/gif" href="assets/images/Favicon%20step/ong%20education%20odd%20favicon.gif">
   <title>Faire un don — ONG EDUCATION ODD</title>
 
+  <!-- SEO + partage -->
+  <meta name="description" content="Faites un don à l'ONG EDUCATION ODD et soutenez nos campagnes de don de sang (ODD 3) et nos programmes d'éducation de qualité (ODD 4).">
+  <link rel="canonical" href="https://education-odd.com/faire-un-don.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ONG EDUCATION ODD">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Faire un don — ONG EDUCATION ODD">
+  <meta property="og:description" content="Soutenez nos campagnes de don de sang (ODD 3) et nos programmes d'éducation de qualité (ODD 4).">
+  <meta property="og:url" content="https://education-odd.com/faire-un-don.html">
+  <meta property="og:image" content="https://education-odd.com/assets/images/impact.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Faire un don — ONG EDUCATION ODD">
+  <meta name="twitter:description" content="Soutenez les actions de l'ONG EDUCATION ODD.">
+  <meta name="twitter:image" content="https://education-odd.com/assets/images/impact.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <!-- Polices (Oswald + Roboto) chargées via assets/css/00-variables.css -->
 
   <!-- CSS global -->
   <link rel="stylesheet" href="assets/css/00-variables.css">
@@ -45,7 +60,7 @@
           Ensemble, agissons pour un avenir meilleur en Côte d'Ivoire.
         </p>
         <p class="don-phrase">
-          👉 agir à nouveau grâce à vous...
+          Chaque don compte : grâce à vous, nous continuons d'agir.
         </p>
       </div>
     </section>
@@ -75,11 +90,12 @@
     <section class="don-amounts">
       <div class="container">
         <h2>Choisissez votre montant</h2>
+        <p>Choisissez un montant indicatif, puis contactez-nous via le bouton ci-dessous — le montant sera pré-rempli dans votre message.</p>
         <div class="amounts-grid">
-          <button class="amount-btn" data-amount="5000">5 000 FCFA</button>
-          <button class="amount-btn" data-amount="10000">10 000 FCFA</button>
-          <button class="amount-btn" data-amount="20000">20 000 FCFA</button>
-          <button class="amount-btn other">Autre montant</button>
+          <button class="amount-btn" data-amount="5000" data-label="5 000 FCFA">5 000 FCFA</button>
+          <button class="amount-btn" data-amount="10000" data-label="10 000 FCFA">10 000 FCFA</button>
+          <button class="amount-btn" data-amount="20000" data-label="20 000 FCFA">20 000 FCFA</button>
+          <button class="amount-btn other" id="donOtherAmount">Autre montant</button>
         </div>
       </div>
     </section>
@@ -90,9 +106,24 @@
         <h2>Donnez maintenant</h2>
         <p>
           Votre contribution est essentielle pour continuer nos missions.
-          Tous les dons sont sécurisés et utilisés à 100% pour nos actions.
+          Chaque don est utilisé à 100 % pour nos actions. Contactez-nous par appel ou WhatsApp :
+          nous vous indiquons la démarche à suivre, simplement et en toute transparence.
         </p>
-        <a href="contact.html" class="don-btn">FAIRE UN DON</a>
+
+        <div class="quick-cta" data-quick-cta id="donQuickCta">
+          <button type="button" class="don-btn quick-cta__trigger" aria-haspopup="true" aria-expanded="false">
+            FAIRE UN DON <span class="quick-cta__caret" aria-hidden="true">▾</span>
+          </button>
+          <div class="quick-cta__menu">
+            <a class="quick-cta__option" href="tel:+2250789084487">
+              <i class="fas fa-phone"></i> Appeler
+            </a>
+            <a class="quick-cta__option" target="_blank" rel="noopener" id="donWhatsappLink"
+               href="https://wa.me/2250789084487?text=Bonjour%2C%20je%20souhaite%20faire%20un%20don%20%C3%A0%20l'ONG%20EDUCATION%20ODD.%20Pouvez-vous%20m'indiquer%20la%20d%C3%A9marche%20%C3%A0%20suivre%20%3F">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -100,6 +131,46 @@
 
   <!-- Footer injecté -->
   <div id="site-footer"></div>
+
+  <script>
+    (function () {
+      const amountBtns = document.querySelectorAll('.amount-btn:not(.other)');
+      const otherBtn = document.getElementById('donOtherAmount');
+      const whatsappLink = document.getElementById('donWhatsappLink');
+      let selectedLabel = '';
+
+      function baseMessage(label) {
+        const montant = label ? ` de ${label}` : '';
+        return `Bonjour, je souhaite faire un don${montant} à l'ONG EDUCATION ODD. Pouvez-vous m'indiquer la démarche à suivre ?`;
+      }
+
+      function updateWhatsappLink() {
+        whatsappLink.href = 'https://wa.me/2250789084487?text=' + encodeURIComponent(baseMessage(selectedLabel));
+      }
+
+      function selectAmount(btn, label) {
+        amountBtns.forEach((b) => b.classList.remove('selected'));
+        otherBtn.classList.remove('selected');
+        if (btn) btn.classList.add('selected');
+        selectedLabel = label;
+        updateWhatsappLink();
+      }
+
+      amountBtns.forEach((btn) => {
+        btn.addEventListener('click', () => selectAmount(btn, btn.dataset.label));
+      });
+
+      otherBtn.addEventListener('click', () => {
+        const value = window.prompt('Montant de votre don (en FCFA) :');
+        if (!value) return;
+        const clean = value.trim();
+        if (!clean) return;
+        selectAmount(otherBtn, `${clean} FCFA`);
+      });
+
+      updateWhatsappLink();
+    })();
+  </script>
 
 </body>
 </html>

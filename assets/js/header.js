@@ -9,6 +9,12 @@ window.initHeaderMenu = function initHeaderMenu() {
   if (!burger || !nav || !header) return;
 
   /* ===============================
+     🔹 PROTECTION DOUBLE INIT
+     =============================== */
+  if (burger.dataset.ready === "1") return;
+  burger.dataset.ready = "1";
+
+  /* ===============================
      🔹 HAUTEUR DYNAMIQUE DU HEADER
      =============================== */
   function updateHeaderHeight() {
@@ -22,12 +28,6 @@ window.initHeaderMenu = function initHeaderMenu() {
 
   // 👉 ICI : au resize
   window.addEventListener("resize", updateHeaderHeight);
-
-  /* ===============================
-     🔹 PROTECTION DOUBLE INIT
-     =============================== */
-  if (burger.dataset.ready === "1") return;
-  burger.dataset.ready = "1";
 
   /* ===============================
      🔹 BURGER
@@ -54,12 +54,10 @@ window.initHeaderMenu = function initHeaderMenu() {
   });
 
   /* ===============================
-     🔹 DROPDOWNS MOBILE
+     🔹 DROPDOWNS (mobile + clavier desktop)
      =============================== */
   nav.querySelectorAll(".has-dropdown > .dropdown-trigger").forEach((btn) => {
     btn.addEventListener("click", (e) => {
-      if (!mobile.matches) return;
-
       const li = e.currentTarget.closest(".has-dropdown");
       const isOpen = li.classList.toggle("open");
       btn.setAttribute("aria-expanded", String(isOpen));
@@ -91,6 +89,24 @@ window.initHeaderMenu = function initHeaderMenu() {
       // 👉 ICI
       setTimeout(updateHeaderHeight, 250);
     }
+  });
+
+  /* ===============================
+     🔹 FERMETURE PAR ÉCHAP
+     =============================== */
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+
+    nav.classList.remove("nav-open");
+    burger.setAttribute("aria-expanded", "false");
+    nav.querySelectorAll(".has-dropdown.open").forEach((li) => {
+      li.classList.remove("open");
+      const b = li.querySelector(".dropdown-trigger");
+      if (b) b.setAttribute("aria-expanded", "false");
+    });
+
+    // 👉 ICI
+    setTimeout(updateHeaderHeight, 250);
   });
 
   /* ===============================

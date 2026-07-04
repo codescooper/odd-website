@@ -1,7 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
 :root{
-  --green:#3F9C35;
-  --orange:#FF8200;
-  --blue:#176BE0;
-  --dark:#261F1F;
+  /* ===== 17 couleurs officielles des ODD (ONU) ===== */
+  --odd-1:#E5243B;  --odd-2:#DDA63A;  --odd-3:#4C9F38;  --odd-4:#C5192D;
+  --odd-5:#FF3A21;  --odd-6:#26BDE2;  --odd-7:#FCC30B;  --odd-8:#A21942;
+  --odd-9:#FD6925;  --odd-10:#DD1367; --odd-11:#FD9D24; --odd-12:#BF8B2E;
+  --odd-13:#3F7E44; --odd-14:#0A97D9; --odd-15:#56C02B; --odd-16:#00689D; --odd-17:#19486A;
+
+  /* ===== Ancrage charte ODD ===== */
+  --sdg-navy:#19486A;        /* bleu nuit officiel (ODD 17) */
+  --sdg-navy-dark:#123450;
+
+  /* ===== Couleurs de marque (alignées ODD) ===== */
+  --green:#4C9F38;           /* ODD 3 — santé (focus ONG) */
+  --red:#C5192D;             /* ODD 4 — éducation (focus ONG) */
+  --orange:#FD9D24;          /* accent chaud (ODD 11) */
+  --blue:#0A97D9;            /* ODD 14 */
+  --dark:#19486A;            /* aligné bleu nuit */
+
+  /* ===== Neutres ===== */
+  --bg:#FFFFFF;
+  --bg-soft:#F4F6F8;
+  --text:#1A1A1A;
+  --text-soft:#444B54;
+  --muted:#6B7280;
+  --border:#E6E8EB;
+
+  /* ===== Rôles sémantiques ===== */
+  --color-primary:var(--sdg-navy);
+  --color-accent:var(--green);     /* ODD 3 */
+  --color-accent-2:var(--red);     /* ODD 4 */
+  --color-link:var(--sdg-navy);
+
+  /* ===== Typographie (charte ODD : Oswald titres, Roboto corps) ===== */
+  --font-sans:'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-display:'Oswald', 'Roboto Condensed', system-ui, sans-serif;
+  --fs-300:13px;
+  --fs-400:15px;
+  --fs-500:18px;
+  --fs-600:22px;
+  --fs-700:28px;
+  --fs-800:36px;
+  --fs-900:44px;
+
+  /* ===== Espacements ===== */
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:24px;
+  --space-6:32px;
+  --space-7:48px;
+  --space-8:64px;
+
+  /* ===== Rayons & ombres ===== */
+  --radius-sm:8px;
+  --radius:14px;
+  --radius-lg:18px;
+  --radius-pill:999px;
+  --shadow-sm:0 6px 20px rgba(0,0,0,.05);
+  --shadow:0 12px 30px rgba(0,0,0,.08);
+  --shadow-lg:0 20px 60px rgba(0,0,0,.18);
+
+  /* ===== Layout ===== */
   --container:1200px;
+  --header-height:0px;
 }

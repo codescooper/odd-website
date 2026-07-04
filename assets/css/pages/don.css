@@ -145,12 +145,25 @@
   background: #FF8200;
   color: #fff;
   padding: 15px 40px;
+  border: none;
   border-radius: 50px;
   font-size: 18px;
+  font-family: inherit;
   font-weight: 800;
   text-decoration: none;
+  cursor: pointer;
   box-shadow: 0 10px 24px rgba(255,130,0,.28);
   transition: all 0.3s ease;
+}
+
+#donQuickCta .quick-cta__menu {
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, -6px);
+}
+
+#donQuickCta.open .quick-cta__menu {
+  transform: translate(-50%, 0);
 }
 
 .don-btn:hover {
