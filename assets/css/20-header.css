@@ -9,7 +9,7 @@ header{
 }
 
 /* Le nom reste présent pour le SEO/lecteurs d'écran, sans occuper de hauteur */
-#mainHeader h1{
+#mainHeader .site-name{
   position:absolute;
   width:1px; height:1px;
   padding:0; margin:-1px;
@@ -62,7 +62,7 @@ header{
 .actions a{ font-size:20px; line-height:1; }
 
 .don{
-  background:var(--green);
+  background:var(--green-dark, #2F7A28);
   color:#fff;
   border-radius:8px;
   padding:10px 18px;
@@ -71,4 +71,74 @@ header{
   white-space:nowrap;
 }
 
-.don:hover{ background:var(--green-dark, #2F7A28); }
+.don:hover{ background:#266421; }
+
+/* ===============================
+   🔹 QUICK CTA (appel / WhatsApp)
+   =============================== */
+.quick-cta{ position:relative; display:inline-flex; }
+
+.quick-cta__trigger{
+  font-family:inherit;
+  border:none;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+
+.quick-cta__caret{
+  font-size:9px;
+  transition: transform .2s ease;
+}
+
+.quick-cta.open .quick-cta__caret{ transform:rotate(180deg); }
+
+.quick-cta__menu{
+  position:absolute;
+  top:calc(100% + 10px);
+  right:0;
+  min-width:230px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 16px 40px rgba(0,0,0,.22);
+  padding:8px;
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(-6px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  z-index:1200;
+}
+
+.quick-cta.open .quick-cta__menu{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.quick-cta__option{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:8px;
+  color:var(--text,#1A1A1A);
+  font-size:14px;
+  font-weight:600;
+  text-decoration:none;
+  transition: background .15s ease;
+}
+
+.quick-cta__option i{ width:18px; text-align:center; color:var(--green); }
+
+.quick-cta__option:hover{ background:var(--bg-soft,#F4F6F8); }
+
+.quick-cta__option--ghost{
+  color:var(--muted,#6B7280);
+  border-top:1px solid var(--border,#E6E8EB);
+  margin-top:4px;
+  padding-top:12px;
+}

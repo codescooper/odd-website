@@ -8,6 +8,10 @@
   height: 180px;
 }
 
+@media (max-width:768px){
+  .spacer{ height: 80px; }
+}
+
 .contact::before {
   content: "";
   position: absolute;
@@ -96,6 +100,30 @@
 .btn-don:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 28px rgba(25,72,106,.4);
+}
+
+.contact-quick-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 0 26px;
+}
+
+.contact-quick-actions .btn {
+  text-decoration: none;
+}
+
+.btn-whatsapp {
+  background: #0E7A3F;
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(14,122,63,.3);
+}
+
+.btn-whatsapp:hover {
+  background: #0B6332;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(14,122,63,.42);
 }
 
 /* Infos de contact */

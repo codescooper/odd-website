@@ -1,23 +1,23 @@
 // ========== DONNÉES DES ODD ==========
 
 const oddData = [
-  { name: "Pas de pauvreté", description: "Éliminer la pauvreté sous toutes ses formes et partout dans le monde, en garantissant à tous un niveau de vie décent.", color: "#e5243b", icon: "🏠" },
-  { name: "Faim « zéro »", description: "Éliminer la faim, assurer la sécurité alimentaire, améliorer la nutrition et promouvoir une agriculture durable.", color: "#dda63a", icon: "🌾" },
-  { name: "Bonne santé et bien-être", description: "Garantir une vie saine et promouvoir le bien-être de tous à tout âge avec un accès universel aux soins de santé.", color: "#4c9f38", icon: "❤️" },
-  { name: "Éducation de qualité", description: "Assurer une éducation inclusive, équitable et de qualité, et promouvoir des opportunités d'apprentissage pour tous.", color: "#c5192d", icon: "📚" },
-  { name: "Égalité entre les sexes", description: "Parvenir à l'égalité des sexes et autonomiser toutes les femmes et les filles dans tous les domaines.", color: "#ff3a21", icon: "⚖️" },
-  { name: "Eau propre et assainissement", description: "Garantir l'accès universel à l'eau potable et à l'assainissement, et assurer une gestion durable des ressources en eau.", color: "#26bde2", icon: "💧" },
-  { name: "Énergie propre et d'un coût abordable", description: "Garantir l'accès à une énergie abordable, fiable, durable et moderne pour tous, en favorisant les énergies renouvelables.", color: "#fcc30b", icon: "⚡" },
-  { name: "Travail décent et croissance économique", description: "Promouvoir une croissance économique soutenue, inclusive et durable, le plein emploi productif et un travail décent pour tous.", color: "#a21942", icon: "💼" },
-  { name: "Industrie, innovation et infrastructure", description: "Bâtir des infrastructures résilientes, promouvoir une industrialisation durable et favoriser l'innovation technologique.", color: "#fd6925", icon: "🏭" },
-  { name: "Inégalités réduites", description: "Réduire les inégalités dans les pays et d'un pays à l'autre, garantir l'égalité des chances pour tous.", color: "#dd1367", icon: "🤝" },
-  { name: "Villes et communautés durables", description: "Faire en sorte que les villes et les établissements humains soient ouverts, sûrs, résilients et durables.", color: "#fd9d24", icon: "🏙️" },
-  { name: "Consommation et production responsables", description: "Établir des modes de consommation et de production durables, réduire le gaspillage et promouvoir l'économie circulaire.", color: "#bf8b2e", icon: "♻️" },
-  { name: "Mesures relatives à la lutte contre les changements climatiques", description: "Prendre d'urgence des mesures pour lutter contre les changements climatiques et leurs répercussions sur la planète.", color: "#3f7e44", icon: "🌍" },
-  { name: "Vie aquatique", description: "Conserver et exploiter de manière durable les océans, les mers et les ressources marines pour le développement durable.", color: "#0a97d9", icon: "🐠" },
-  { name: "Vie terrestre", description: "Protéger, restaurer et promouvoir l'utilisation durable des écosystèmes terrestres, gérer durablement les forêts et lutter contre la désertification.", color: "#56c02b", icon: "🌳" },
-  { name: "Paix, justice et institutions efficaces", description: "Promouvoir des sociétés pacifiques et inclusives, assurer l'accès à la justice pour tous et mettre en place des institutions efficaces.", color: "#00689d", icon: "⚖️" },
-  { name: "Partenariats pour la réalisation des objectifs", description: "Renforcer les moyens de mise en œuvre et revitaliser le partenariat mondial pour le développement durable.", color: "#19486a", icon: "🌐" }
+  { name: "Pas de pauvreté", description: "Éliminer la pauvreté sous toutes ses formes et partout dans le monde.", color: "#e5243b", icon: "🏠" },
+  { name: "Faim « zéro »", description: "Éliminer la faim, assurer la sécurité alimentaire, améliorer la nutrition et promouvoir l’agriculture durable.", color: "#dda63a", icon: "🌾" },
+  { name: "Bonne santé et bien-être", description: "Permettre à tous de vivre en bonne santé et promouvoir le bien-être de tous à tout âge.", color: "#4c9f38", icon: "❤️" },
+  { name: "Éducation de qualité", description: "Assurer l’accès de tous à une éducation de qualité, sur un pied d’égalité, et promouvoir les possibilités d’apprentissage tout au long de la vie.", color: "#c5192d", icon: "📚" },
+  { name: "Égalité entre les sexes", description: "Parvenir à l’égalité des sexes et autonomiser toutes les femmes et les filles.", color: "#ff3a21", icon: "⚖️" },
+  { name: "Eau propre et assainissement", description: "Garantir l’accès de tous à des services d’alimentation en eau et d’assainissement gérés de façon durable.", color: "#26bde2", icon: "💧" },
+  { name: "Énergie propre et d’un coût abordable", description: "Garantir l’accès de tous à des services énergétiques fiables, durables et modernes, à un coût abordable.", color: "#fcc30b", icon: "⚡" },
+  { name: "Travail décent et croissance économique", description: "Promouvoir une croissance économique soutenue, partagée et durable, le plein emploi productif et un travail décent pour tous.", color: "#a21942", icon: "💼" },
+  { name: "Industrie, innovation et infrastructure", description: "Bâtir une infrastructure résiliente, promouvoir une industrialisation durable qui profite à tous et encourager l’innovation.", color: "#fd6925", icon: "🏭" },
+  { name: "Inégalités réduites", description: "Réduire les inégalités dans les pays et d’un pays à l’autre.", color: "#dd1367", icon: "🤝" },
+  { name: "Villes et communautés durables", description: "Faire en sorte que les villes et les établissements humains soient ouverts à tous, sûrs, résilients et durables.", color: "#fd9d24", icon: "🏙️" },
+  { name: "Consommation et production durables", description: "Établir des modes de consommation et de production durables.", color: "#bf8b2e", icon: "♻️" },
+  { name: "Mesures relatives à la lutte contre les changements climatiques", description: "Prendre d’urgence des mesures pour lutter contre les changements climatiques et leurs répercussions.", color: "#3f7e44", icon: "🌍" },
+  { name: "Vie aquatique", description: "Conserver et exploiter de manière durable les océans, les mers et les ressources marines aux fins du développement durable.", color: "#0a97d9", icon: "🐠" },
+  { name: "Vie terrestre", description: "Préserver et restaurer les écosystèmes terrestres, en veillant à les exploiter de façon durable, gérer durablement les forêts, lutter contre la désertification, enrayer et inverser le processus de dégradation des sols et mettre fin à l’appauvrissement de la biodiversité.", color: "#56c02b", icon: "🌳" },
+  { name: "Paix, justice et institutions efficaces", description: "Promouvoir l’avènement de sociétés pacifiques et inclusives aux fins du développement durable, assurer l’accès de tous à la justice et mettre en place, à tous les niveaux, des institutions efficaces, responsables et ouvertes à tous.", color: "#00689d", icon: "⚖️" },
+  { name: "Partenariats pour la réalisation des objectifs", description: "Renforcer les moyens de mettre en œuvre le Partenariat mondial pour le développement durable et le revitaliser.", color: "#19486a", icon: "🌐" }
 ];
 
 let currentActiveOdd = 1;
@@ -275,11 +275,12 @@ function loadQuestion() {
   nextBtn.style.display = 'none';
 
   question.options.forEach((option, index) => {
-    const optionDiv = document.createElement('div');
-    optionDiv.className = 'quiz-option';
-    optionDiv.textContent = option;
-    optionDiv.addEventListener('click', () => handleAnswer(index));
-    quizOptions.appendChild(optionDiv);
+    const optionBtn = document.createElement('button');
+    optionBtn.type = 'button';
+    optionBtn.className = 'quiz-option';
+    optionBtn.textContent = option;
+    optionBtn.addEventListener('click', () => handleAnswer(index));
+    quizOptions.appendChild(optionBtn);
   });
 }
 

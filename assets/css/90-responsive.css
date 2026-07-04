@@ -10,7 +10,10 @@
 
   /* HEADER */
   .burger{ display:block; margin-left:auto; }
-  .actions{ display:none; }
+  .actions{ display:flex; gap:8px; }
+  .actions > a{ display:none; } /* masque YouTube/Facebook, garde le bouton don visible */
+  .don{ padding:11px 14px; font-size:13px !important; }
+  .quick-cta__menu{ right:-10px; }
 
   /* MENU PANEL */
   .block-header__nav{
@@ -25,15 +28,21 @@
     border-top:1px solid rgba(255,255,255,.25);
     box-shadow: 0 12px 30px rgba(0,0,0,.25);
 
+    /* défilement si le menu dépasse l'écran */
+    max-height:calc(100vh - var(--header-height, 64px));
+    overflow-y:auto;
+
     /* animation */
     opacity:0;
+    visibility:hidden;
     transform: translateY(-8px);
     pointer-events:none;
-    transition: opacity .25s ease, transform .25s ease;
+    transition: opacity .25s ease, transform .25s ease, visibility .25s;
   }
 
   .block-header__nav.nav-open{
     opacity:1;
+    visibility:visible;
     transform: translateY(0);
     pointer-events:auto;
   }
@@ -55,7 +64,7 @@
   .has-dropdown.open > .block-header-item__dropdown-area{ display:block; }
   .block-header-item__dropdown{ width:100%; min-width:0; }
 
-  block-header__nav-links a.item-content,
+  .block-header__nav-links a.item-content,
   .block-header__nav-links button.item-content{
     padding:12px 6px;
     border-radius:6px;

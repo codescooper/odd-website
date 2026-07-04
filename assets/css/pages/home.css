@@ -227,7 +227,7 @@ img {
   color: #fff;
 }
 
-.band h3 {
+.band h2 {
   margin: 0 0 18px;
   text-align: center;
   font-size: 46px;
@@ -266,10 +266,14 @@ img {
   padding: 22px;
 }
 
-.bloc-txt h2,
+.bloc-txt h3,
 .bloc-txt p {
   color: #fff;
   margin: 0;
+}
+
+.bloc-txt h3 {
+  font-size: 20px;
 }
 
 /* PARTENAIRES */
@@ -352,7 +356,7 @@ img {
   z-index: 2;
 }
 
-.contact h3 {
+.contact h2 {
   color: #fff;
   text-align: center;
   font-size: 52px;
@@ -410,8 +414,14 @@ img {
   }
 
   .title,
-  .band h3,
-  .contact h3 {
+  .band h2,
+  .contact h2 {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bloc-txt h3 {
+    font-size: 16px;
   }
 }

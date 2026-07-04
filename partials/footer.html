@@ -21,6 +21,8 @@
         <a href="nos-projets.html">Nos projets</a>
         <a href="blog.html">Actualités</a>
         <a href="presse.html">Presse</a>
+        <a href="contact.html">Contact</a>
+        <a href="faire-un-don.html">Faire un don</a>
       </div>
 
       <div class="footer-col">
@@ -42,7 +44,8 @@
           <input type="hidden" name="subject" value="Nouvelle inscription newsletter — education-odd.com">
           <input type="hidden" name="from_name" value="Newsletter ONG EDUCATION ODD">
           <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="email" name="email" placeholder="Votre e-mail" required>
+          <label class="sr-only" for="newsletter-email">Votre adresse e-mail</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="Votre e-mail" required>
           <button class="send" type="submit">S'inscrire à la newsletter</button>
         </form>
       </div>
